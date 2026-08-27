@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
 
+    ../../modules/umbriel.nix
     ../../modules/core
     ../../modules/desktop
     ../../modules/hardware/intel.nix

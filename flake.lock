@@ -195,7 +195,9 @@
         "noctalia": "noctalia",
         "noctalia-greeter": "noctalia-greeter",
         "surge": "surge",
+        "umbriel": "umbriel",
         "winapps": "winapps",
+        "xdg-desktop-portal-umbriel": "xdg-desktop-portal-umbriel_2",
         "zen-browser": "zen-browser"
       }
     },
@@ -233,6 +235,29 @@
         "type": "github"
       }
     },
+    "umbriel": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "xdg-desktop-portal-umbriel": "xdg-desktop-portal-umbriel"
+      },
+      "locked": {
+        "lastModified": 1787818198,
+        "narHash": "sha256-7d22N04P1m5baqMGrj5csQrN4vw50BtYRmJmvRE7+HE=",
+        "ref": "refs/heads/main",
+        "rev": "7327c92160fd81d6726e0115e9e614f935731779",
+        "revCount": 607,
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/noctalia-dev/umbriel.git"
+      },
+      "original": {
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/noctalia-dev/umbriel.git"
+      }
+    },
     "winapps": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -254,6 +279,49 @@
         "owner": "winapps-org",
         "repo": "winapps",
         "type": "github"
+      }
+    },
+    "xdg-desktop-portal-umbriel": {
+      "inputs": {
+        "nixpkgs": [
+          "umbriel",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1787580138,
+        "narHash": "sha256-fqU58lZeFchlY5aqyQgIfrN5ec/jqbhXNwNxyL2lp/g=",
+        "owner": "noctalia-dev",
+        "repo": "xdg-desktop-portal-umbriel",
+        "rev": "515c9f70f13ba4b4b9e19930b3e899c4ac8a50a4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "xdg-desktop-portal-umbriel",
+        "type": "github"
+      }
+    },
+    "xdg-desktop-portal-umbriel_2": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1787580138,
+        "narHash": "sha256-fqU58lZeFchlY5aqyQgIfrN5ec/jqbhXNwNxyL2lp/g=",
+        "ref": "refs/heads/main",
+        "rev": "515c9f70f13ba4b4b9e19930b3e899c4ac8a50a4",
+        "revCount": 19,
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/noctalia-dev/xdg-desktop-portal-umbriel.git"
+      },
+      "original": {
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/noctalia-dev/xdg-desktop-portal-umbriel.git"
       }
     },
     "zen-browser": {
