@@ -52,8 +52,7 @@
     };
 
     shellInit = ''
-      export NPM_CONFIG_USERCONFIG="$HOME/.npm/.npmrc"
-      export PATH="$HOME/.local/bin:$HOME/.npm-global/bin:$PATH"
+      export PATH="$HOME/.local/bin:$PATH"
 
       nixfrost() {
         local day=$(date +%-d)

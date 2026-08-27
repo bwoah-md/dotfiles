@@ -59,16 +59,20 @@
   cliamp = pkgs.buildGoModule {
     pname = "cliamp";
     version = "latest";
+
     src = pkgs.fetchFromGitHub {
       owner = "bjarneo";
       repo = "cliamp";
       rev = "main";
       hash = "sha256-lRiNYuxUQiOUsk/jhEMl1x6MCUFQ8wREI7yVX3yUcZY=";
     };
+
     vendorHash = "sha256-WYyv0w5KFA15axb+NA9tClfc1H4Znj8kI2boR8XziXg=";
+
     nativeBuildInputs = with pkgs; [
       pkg-config
     ];
+
     buildInputs = with pkgs; [
       alsa-lib
       libvorbis
@@ -76,7 +80,8 @@
       flac
     ];
   };
-  # ─── Superseedr (BitTorrent Seeding Tool) ─────────────
+
+  # ─── Superseedr (BitTorrent Seeding Tool) ──────────
   superseedr = pkgs.rustPlatform.buildRustPackage {
     pname = "superseedr";
     version = "latest";
@@ -99,5 +104,34 @@
     buildInputs = with pkgs; [
       openssl
     ];
+  };
+
+  # ─── Ghosttime (Terminal Animation) ─────────────────
+  ghosttime = pkgs.stdenv.mkDerivation rec {
+    pname = "ghosttime";
+    version = "1.3.0";
+
+    src = pkgs.fetchurl {
+      url = "https://registry.npmjs.org/ghosttime/-/ghosttime-${version}.tgz";
+      hash = "sha256-QKR1OO+ZlCZm3tHXpGse2R0hH7G2xKwDm2H7/6tT5lU=";
+    };
+
+    dontUnpack = false;
+
+    installPhase = ''
+      mkdir -p $out/lib/node_modules/ghosttime
+      cp -r . $out/lib/node_modules/ghosttime
+
+      mkdir -p $out/bin
+      ln -s $out/lib/node_modules/ghosttime/dist/cli.js $out/bin/ghosttime
+    '';
+
+    meta = with pkgs.lib; {
+      description = "Ghostty-style terminal animation";
+      homepage = "https://github.com/SohelIslamImran/ghosttime";
+      license = licenses.mit;
+      platforms = platforms.linux;
+      mainProgram = "ghosttime";
+    };
   };
 }
