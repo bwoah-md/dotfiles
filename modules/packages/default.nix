@@ -38,6 +38,7 @@ in
     neovim
     zed-editor
     nixd
+    nil
     nixfmt
     nodejs
     python3
