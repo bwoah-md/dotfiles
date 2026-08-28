@@ -4,6 +4,8 @@ let
   custom = import ./custom.nix { inherit pkgs lib; };
 in
 {
+  nixpkgs.config.allowUnfree = true;
+
   environment.systemPackages = with pkgs; [
     # ─────────────────────────────────────────────────
     # Custom Packages
