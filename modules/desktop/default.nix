@@ -26,15 +26,7 @@
         "org.freedesktop.impl.portal.ScreenCast" = [ "umbriel" ];
         "org.freedesktop.impl.portal.Screenshot" = [ "umbriel" ];
       };
-      # FIXED — programs.niri.enable already ships its own portal default for
-      # the "niri" desktop category: default = "gnome;gtk" (prefer gnome,
-      # fall back to gtk). That's what was actually answering
-      # org.freedesktop.portal.Settings (color-scheme, accent-color,
-      # icon-theme) — the gnome backend, not gtk — which is what was
-      # producing GTK app theming that didn't match your actual GTK/dconf
-      # settings. Adding a plain `niri = { ... }` block here conflicts with
-      # that module default (two definitions, same priority), so it must be
-      # forced instead.
+      # Niri
       niri = lib.mkForce {
         default = [ "gtk" ];
         "org.freedesktop.impl.portal.ScreenCast" = [ "gnome" ];
