@@ -1,137 +1,78 @@
 { pkgs, lib, ... }:
 
 {
-  # ─── Swash (Screenshot Annotator) ───────────────────
-  swash = pkgs.callPackage (
-    { lib
-    , stdenv
-    , fetchFromGitHub
-    , meson
-    , ninja
-    , pkg-config
-    , wrapGAppsHook4
-    , gtk4
-    , libadwaita
-    , tesseract
-    , wl-clipboard
-    }:
+  # ─── Swash ──────────────────────────────────────────
+  swash = pkgs.stdenv.mkDerivation (finalAttrs: {
+    pname = "swash";
+    version = "1.5.1";
 
-    stdenv.mkDerivation rec {
-      pname = "swash";
-      version = "1.5.1";
+    src = pkgs.fetchFromGitHub {
+      owner = "ItsLemmy";
+      repo = "swash";
+      rev = "v${finalAttrs.version}";
+      hash = "sha256-SxdrsKUIDLUfWQp7Wa50NwFo36h3LzMd6SOBIy14KAA=";
+    };
 
-      src = fetchFromGitHub {
-        owner = "ItsLemmy";
-        repo = "swash";
-        rev = "v${version}";
-        hash = "sha256-SxdrsKUIDLUfWQp7Wa50NwFo36h3LzMd6SOBIy14KAA=";
-      };
+    nativeBuildInputs = with pkgs; [ meson ninja pkg-config wrapGAppsHook4 ];
+    buildInputs = with pkgs; [ gtk4 libadwaita ];
 
-      nativeBuildInputs = [
-        meson
-        ninja
-        pkg-config
-        wrapGAppsHook4
-      ];
+    preFixup = ''
+      gappsWrapperArgs+=(--prefix PATH : "${lib.makeBinPath (with pkgs; [ tesseract wl-clipboard ])}")
+    '';
 
-      buildInputs = [
-        gtk4
-        libadwaita
-      ];
+    meta.mainProgram = "swash";
+  });
 
-      preFixup = ''
-        gappsWrapperArgs+=(
-          --prefix PATH : "${lib.makeBinPath [ tesseract wl-clipboard ]}"
-        )
-      '';
-
-      meta = with lib; {
-        description = "Screenshot annotator and lightweight image editor";
-        homepage = "https://github.com/ItsLemmy/swash";
-        license = licenses.gpl3Plus;
-        platforms = platforms.linux;
-        mainProgram = "swash";
-      };
-    }
-  ) { };
-
-  # ─── Cliamp (CLI Music Player) ──────────────────────
+  # ─── Cliamp ─────────────────────────────────────────
   cliamp = pkgs.buildGoModule {
     pname = "cliamp";
-    version = "latest";
-
+    version = "0.1.0-unstable";
     src = pkgs.fetchFromGitHub {
       owner = "bjarneo";
       repo = "cliamp";
       rev = "main";
-      hash = "sha256-lRiNYuxUQiOUsk/jhEMl1x6MCUFQ8wREI7yVX3yUcZY=";
+      hash = "sha256-J4tU9WdpVx7iDKQCfFUEeN+I4YEdk4U0dEOgo2u+zSI=";
     };
-
-    vendorHash = "sha256-WYyv0w5KFA15axb+NA9tClfc1H4Znj8kI2boR8XziXg=";
-
-    nativeBuildInputs = with pkgs; [
-      pkg-config
-    ];
-
-    buildInputs = with pkgs; [
-      alsa-lib
-      libvorbis
-      libogg
-      flac
-    ];
+    vendorHash = "sha256-/c2MOMnG8twpr2/9plFanXkJwoIYNwC0mPksTklIcRw=";
+    nativeBuildInputs = [ pkgs.pkg-config ];
+    buildInputs = with pkgs; [ alsa-lib libvorbis libogg flac mpg123 ];
+    meta.mainProgram = "cliamp";
   };
 
-  # ─── Superseedr (BitTorrent Seeding Tool) ──────────
+  # ─── Superseedr ─────────────────────────────────────
   superseedr = pkgs.rustPlatform.buildRustPackage {
     pname = "superseedr";
-    version = "latest";
-
+    version = "0.1.0-unstable";
     src = pkgs.fetchFromGitHub {
       owner = "Jagalite";
       repo = "superseedr";
       rev = "main";
       hash = "sha256-+ivUhDnwr0s4AaGkbJYsVrwhAhN5wGq+0Q4JKe4bWHk=";
     };
-
     cargoHash = "sha256-IVPUmED6xuYqIG5ryazpBEvQOOghgB32/2GJfaMMAuQ=";
-
     doCheck = false;
-
-    nativeBuildInputs = with pkgs; [
-      pkg-config
-    ];
-
-    buildInputs = with pkgs; [
-      openssl
-    ];
+    nativeBuildInputs = [ pkgs.pkg-config ];
+    buildInputs = [ pkgs.openssl ];
+    meta.mainProgram = "superseedr";
   };
 
-  # ─── Ghosttime (Terminal Animation) ─────────────────
-  ghosttime = pkgs.stdenv.mkDerivation rec {
+  # ─── Ghosttime ──────────────────────────────────────
+  ghosttime = pkgs.stdenv.mkDerivation (finalAttrs: {
     pname = "ghosttime";
     version = "1.3.0";
-
     src = pkgs.fetchurl {
-      url = "https://registry.npmjs.org/ghosttime/-/ghosttime-${version}.tgz";
+      url = "https://registry.npmjs.org/ghosttime/-/ghosttime-${finalAttrs.version}.tgz";
       hash = "sha256-QKR1OO+ZlCZm3tHXpGse2R0hH7G2xKwDm2H7/6tT5lU=";
     };
-
-    dontUnpack = false;
-
+    nativeBuildInputs = [ pkgs.makeWrapper ];
     installPhase = ''
-      mkdir -p $out/lib/node_modules/ghosttime
+      runHook preInstall
+      mkdir -p $out/lib/node_modules/ghosttime $out/bin
       cp -r . $out/lib/node_modules/ghosttime
-
-      mkdir -p $out/bin
-      ln -s $out/lib/node_modules/ghosttime/dist/cli.js $out/bin/ghosttime
+      makeWrapper ${pkgs.nodejs}/bin/node $out/bin/ghosttime \
+        --add-flags "$out/lib/node_modules/ghosttime/dist/cli.js"
+      runHook postInstall
     '';
-
-    meta = with pkgs.lib; {
-      description = "Ghostty-style terminal animation";
-      homepage = "https://github.com/SohelIslamImran/ghosttime";
-      license = licenses.mit;
-      platforms = platforms.linux;
-      mainProgram = "ghosttime";
-    };
-  };
+    meta.mainProgram = "ghosttime";
+  });
 }

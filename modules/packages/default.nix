@@ -26,6 +26,7 @@ in
     ripgrep
     tree
     ncdu
+    concord-tui
 
     # Terminal Toys
     cbonsai

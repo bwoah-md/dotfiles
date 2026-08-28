@@ -7,17 +7,11 @@
 
   programs.umbriel.enable = true;
 
-  # Umbriel Portal Overlay
-  nixpkgs.overlays = [
-    inputs.xdg-desktop-portal-umbriel.overlays.default
-  ];
-
-  # Desktop Portals for ScreenCast / Screenshot + GTK fallbacks
+  # Desktop Portals configuration
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
-      xdg-desktop-portal-umbriel
     ];
 
     config.umbriel = {
