@@ -5,6 +5,12 @@
   programs.dconf.enable = lib.mkDefault true;
   services.gvfs.enable = lib.mkDefault true;
 
+  # Let NixOS configure QT_QPA_PLATFORMTHEME automatically
+  qt = {
+    enable = true;
+    platformTheme = "qt5ct";
+  };
+
   environment.systemPackages = with pkgs; [
     # GTK / Desktop Integration & Theming
     nautilus
@@ -15,6 +21,7 @@
     bibata-cursors
 
     # Qt Theming
+    libsForQt5.qt5ct
     kdePackages.qt6ct
     kdePackages.kcolorscheme
   ];
