@@ -20,7 +20,7 @@ nixos/
 ### 1. Clone the repository
 
 ```bash
-git clone [https://github.com/bwoah-md/dotfiles.git](https://github.com/bwoah-md/dotfiles.git) ~/.config/nixos
+git clone [https://github.com/bwoah-md/nixbtw.git](https://github.com/bwoah-md/nixbtw.git) ~/.config/nixos
 ```
 
 ### 2. Generate Hardware Configuration & Build
