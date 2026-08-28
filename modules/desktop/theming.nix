@@ -1,14 +1,13 @@
 { pkgs, lib, ... }:
 
 {
-  # Ensure D-Bus services and theming backend work properly for GTK/Nautilus
   programs.dconf.enable = lib.mkDefault true;
   services.gvfs.enable = lib.mkDefault true;
 
-  # Let NixOS configure QT_QPA_PLATFORMTHEME automatically
-  qt = {
-    enable = true;
-    platformTheme = "qt5ct";
+  # Declaratively set session variables for the entire desktop
+  environment.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = lib.mkForce "qt6ct";
+    QT_QPA_PLATFORM = "wayland;xcb";
   };
 
   environment.systemPackages = with pkgs; [
@@ -24,5 +23,6 @@
     libsForQt5.qt5ct
     kdePackages.qt6ct
     kdePackages.kcolorscheme
+    kdePackages.qtsvg
   ];
 }
