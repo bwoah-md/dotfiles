@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -42,6 +42,7 @@
       nixrebuild = "sudo nixos-rebuild switch --flake ~/.config/nixos#nix";
       nixupdate  = "nix flake update --flake ~/.config/nixos && sudo nixos-rebuild switch --flake ~/.config/nixos#nix";
       nixclean   = "sudo nix-collect-garbage -d && nix-collect-garbage -d";
+      nixflakeupdate = "nix flake update --flake ~/.config/nixos";
 
       # Container / VM controls
       docker-start = "sudo systemctl start docker";
