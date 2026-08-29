@@ -63,7 +63,7 @@
           3|23)    suffix="rd" ;;
         esac
 
-        local timestamp="$(date +"\%-d$suffix %b, %Y at %H:%M")"
+        local timestamp="$(date +"%-d$suffix %b, %Y at %H:%M")"
 
         sudo -v || return 1
 
