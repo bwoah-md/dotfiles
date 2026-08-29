@@ -18,7 +18,6 @@ in
     custom.superseedr
     custom.ghosttime
 
-
     # ─────────────────────────────────────────────────
     # Shell & Terminal
     # ─────────────────────────────────────────────────
@@ -37,7 +36,6 @@ in
     cbonsai
     unimatrix
 
-
     # ─────────────────────────────────────────────────
     # Development
     # ─────────────────────────────────────────────────
@@ -50,7 +48,6 @@ in
     python3
     jq
 
-
     # ─────────────────────────────────────────────────
     # Browsers
     # ─────────────────────────────────────────────────
@@ -58,7 +55,6 @@ in
     tor-browser
     mullvad-browser
     qutebrowser
-
 
     # ─────────────────────────────────────────────────
     # CLI / File Utilities
@@ -72,7 +68,6 @@ in
     unzip
     unrar
 
-
     # ─────────────────────────────────────────────────
     # Hardware & System Diagnostics
     # ─────────────────────────────────────────────────
@@ -82,17 +77,13 @@ in
     smartmontools
     alsa-utils
 
-
     # ─────────────────────────────────────────────────
     # Wayland / Desktop Utilities
     # ─────────────────────────────────────────────────
-    grim
-    slurp
     hyprpicker
     wl-clipboard
     gpu-screen-recorder
     ffmpegthumbnailer
-
 
     # ─────────────────────────────────────────────────
     # Media
@@ -106,14 +97,12 @@ in
     cava
     scrcpy
 
-
     # ─────────────────────────────────────────────────
     # Communication
     # ─────────────────────────────────────────────────
     vesktop
     signal-desktop
     telegram-desktop
-
 
     # ─────────────────────────────────────────────────
     # Windows / Remote Desktop
@@ -122,7 +111,6 @@ in
     dialog
     libnotify
     netcat-openbsd
-
 
     # ─────────────────────────────────────────────────
     # Applications
