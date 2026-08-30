@@ -2,7 +2,6 @@
 
 let
   swash = import ./custom/swash.nix { inherit pkgs lib; };
-  cliamp = import ./custom/cliamp.nix { inherit pkgs; };
   superseedr = import ./custom/superseedr.nix { inherit pkgs; };
   ghosttime = import ./custom/ghosttime.nix { inherit pkgs; };
 in

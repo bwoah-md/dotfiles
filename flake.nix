@@ -49,7 +49,6 @@
       # Custom Packages
       packages.${system} = {
         swash = import ./modules/packages/custom/swash.nix { inherit pkgs; lib = pkgs.lib; };
-        cliamp = import ./modules/packages/custom/cliamp.nix { inherit pkgs; };
         superseedr = import ./modules/packages/custom/superseedr.nix { inherit pkgs; };
         ghosttime = import ./modules/packages/custom/ghosttime.nix { inherit pkgs; };
       };

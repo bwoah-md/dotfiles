@@ -54,6 +54,7 @@ All repository and system maintenance operations are managed using dedicated she
 - **Push to GitHub:** `nixpush`
 - **Pull remote changes:** `nixpull`
 - **Status check:** `nixstatus`
+- **Flake update:** `nixflakeupdate`
 
 ### System Maintenance
 - **Rebuild switch:** `nixrebuild`

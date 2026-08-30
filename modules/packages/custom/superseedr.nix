@@ -2,16 +2,16 @@
 
 pkgs.rustPlatform.buildRustPackage {
   pname = "superseedr";
-  version = "0.1.0-unstable";
+  version = "1.0.14-unstable-2026-08-29";
 
   src = pkgs.fetchFromGitHub {
     owner = "Jagalite";
     repo = "superseedr";
-    rev = "main";
-    hash = "sha256-+ivUhDnwr0s4AaGkbJYsVrwhAhN5wGq+0Q4JKe4bWHk=";
+    rev = "f484b50d144fb077e4f6e5ee3d2ce59273a8cf1a";
+    hash = "sha256-RCPz4ugU7V5B6jl0wUg/mPxvoUX/TF0RM18tT0caTIM=";
   };
 
-  cargoHash = "sha256-IVPUmED6xuYqIG5ryazpBEvQOOghgB32/2GJfaMMAuQ=";
+  cargoHash = "sha256-F6omghG3PWC9nQ/FNcDNm3r9+mpENx/npqiqD9tvi8Q=";
   doCheck = false;
 
   nativeBuildInputs = [ pkgs.pkg-config ];
