@@ -36,13 +36,13 @@
       # NixOS Git Workflow
       nixadd     = "git -C ~/.config/nixos add -A";
       nixcommit  = "git -C ~/.config/nixos commit -m";
-      nixpush    = "git -C ~/.config/nixos push origin main --force";
+      nixpush    = "git -C ~/.config/nixos push origin main";
       nixpull    = "git -C ~/.config/nixos pull origin main";
       nixstatus  = "git -C ~/.config/nixos status";
       nixrebuild = "sudo nixos-rebuild switch --flake ~/.config/nixos#nix";
-      nixupdate  = "nix flake update --flake ~/.config/nixos && sudo nixos-rebuild switch --flake ~/.config/nixos#nix";
+      nixupdate  = "cd ~/.config/nixos && nix-update swash --flake --build && nix-update superseedr --flake --build && nix-update ghosttime --flake --build";
       nixclean   = "sudo nix-collect-garbage -d && nix-collect-garbage -d";
-      nixflakeupdate = "nix flake update --flake ~/.config/nixos";
+      nixflake   = "nix flake update --flake ~/.config/nixos";
 
       # Container / VM controls
       docker-start = "sudo systemctl start docker";
