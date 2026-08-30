@@ -27,13 +27,19 @@
     };
   };
   outputs = { self, nixpkgs, ... }@inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-      };
-    in
+  let
+    system = "x86_64-linux";
+
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
+
+    customPackages = import ./modules/packages/custom.nix {
+      inherit pkgs;
+      lib = pkgs.lib;
+    };
+  in
     {
       nixosConfigurations.nix = nixpkgs.lib.nixosSystem {
         inherit system;
@@ -47,10 +53,6 @@
       };
 
       # Custom Packages
-      packages.${system} = {
-        swash = import ./modules/packages/custom/swash.nix { inherit pkgs; lib = pkgs.lib; };
-        superseedr = import ./modules/packages/custom/superseedr.nix { inherit pkgs; };
-        ghosttime = import ./modules/packages/custom/ghosttime.nix { inherit pkgs; };
-      };
+      packages.${system} = customPackages;
     };
 }

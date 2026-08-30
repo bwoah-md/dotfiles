@@ -1,12 +1,13 @@
 { pkgs, inputs, lib, ... }:
 
 let
-  swash = import ./custom/swash.nix { inherit pkgs lib; };
-  superseedr = import ./custom/superseedr.nix { inherit pkgs; };
-  ghosttime = import ./custom/ghosttime.nix { inherit pkgs; };
+  customPackages = import ./custom.nix {
+    inherit pkgs lib;
+  };
 in
 {
   nixpkgs.config.allowUnfree = true;
+
   environment.sessionVariables = {
     NIXPKGS_ALLOW_UNFREE = "1";
   };
@@ -15,10 +16,9 @@ in
     # ─────────────────────────────────────────────────
     # Custom Packages
     # ─────────────────────────────────────────────────
-    swash
-    cliamp
-    superseedr
-    ghosttime
+    customPackages.swash
+    customPackages.superseedr
+    customPackages.ghosttime
 
     # ─────────────────────────────────────────────────
     # Shell & Terminal
@@ -33,6 +33,7 @@ in
     tree
     ncdu
     concord-tui
+    cliamp
 
     # Terminal Toys
     cbonsai
