@@ -1,7 +1,10 @@
 { pkgs, inputs, lib, ... }:
 
 let
-  custom = import ./custom.nix { inherit pkgs lib; };
+  swash = import ./custom/swash.nix { inherit pkgs lib; };
+  cliamp = import ./custom/cliamp.nix { inherit pkgs; };
+  superseedr = import ./custom/superseedr.nix { inherit pkgs; };
+  ghosttime = import ./custom/ghosttime.nix { inherit pkgs; };
 in
 {
   nixpkgs.config.allowUnfree = true;
@@ -13,10 +16,10 @@ in
     # ─────────────────────────────────────────────────
     # Custom Packages
     # ─────────────────────────────────────────────────
-    custom.swash
-    custom.cliamp
-    custom.superseedr
-    custom.ghosttime
+    swash
+    cliamp
+    superseedr
+    ghosttime
 
     # ─────────────────────────────────────────────────
     # Shell & Terminal
@@ -44,6 +47,7 @@ in
     nixd
     nil
     nixfmt
+    nix-update
     nodejs
     python3
     jq
