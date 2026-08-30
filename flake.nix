@@ -1,50 +1,60 @@
 {
   description = "NixOS Flake Configuration for icy@nix";
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     noctalia.url = "github:noctalia-dev/noctalia/cachix";
-
     noctalia-greeter = {
       url = "github:noctalia-dev/noctalia-greeter";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     helium-flake = {
       url = "github:oxcl/nix-flake-helium-browser";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     surge.url = "github:SurgeDM/Surge/08d09d11199acf6082a89c4da0d19a04749de997";
-
     winapps = {
       url = "github:winapps-org/winapps";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     umbriel = {
       url = "git+https://github.com/noctalia-dev/umbriel.git?submodules=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     xdg-desktop-portal-umbriel = {
       url = "git+https://github.com/noctalia-dev/xdg-desktop-portal-umbriel.git?submodules=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-
-  outputs = { self, nixpkgs, ... }@inputs: {
-    nixosConfigurations.nix = nixpkgs.lib.nixosSystem {
+  outputs = { self, nixpkgs, ... }@inputs:
+    let
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./hosts/nix
-        inputs.noctalia.nixosModules.default
-        inputs.noctalia-greeter.nixosModules.default
-        inputs.helium-flake.nixosModules.default
-      ];
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+    in
+    {
+      nixosConfigurations.nix = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/nix
+          inputs.noctalia.nixosModules.default
+          inputs.noctalia-greeter.nixosModules.default
+          inputs.helium-flake.nixosModules.default
+        ];
+      };
+
+      # Exposes the 4 custom packages so `nix-update --flake <name>` can find
+      # and patch them directly (needs an actual packages.<system>.<name>
+      # attribute path — plain `import ./custom.nix` inside the NixOS module
+      # alone doesn't give nix-update anything to target).
+      packages.${system} = {
+        swash = import ./modules/packages/custom/swash.nix { inherit pkgs; lib = pkgs.lib; };
+        cliamp = import ./modules/packages/custom/cliamp.nix { inherit pkgs; };
+        superseedr = import ./modules/packages/custom/superseedr.nix { inherit pkgs; };
+        ghosttime = import ./modules/packages/custom/ghosttime.nix { inherit pkgs; };
+      };
     };
-  };
 }
