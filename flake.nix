@@ -46,10 +46,7 @@
         ];
       };
 
-      # Exposes the 4 custom packages so `nix-update --flake <name>` can find
-      # and patch them directly (needs an actual packages.<system>.<name>
-      # attribute path — plain `import ./custom.nix` inside the NixOS module
-      # alone doesn't give nix-update anything to target).
+      # Custom Packages
       packages.${system} = {
         swash = import ./modules/packages/custom/swash.nix { inherit pkgs; lib = pkgs.lib; };
         cliamp = import ./modules/packages/custom/cliamp.nix { inherit pkgs; };
