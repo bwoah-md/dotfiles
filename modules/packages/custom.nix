@@ -36,7 +36,7 @@
 
   superseedr = pkgs.rustPlatform.buildRustPackage {
     pname = "superseedr";
-    version = "1.0.14-unstable-2026-08-29";
+    version = "1.0.14";
 
     src = pkgs.fetchFromGitHub {
       owner = "Jagalite";

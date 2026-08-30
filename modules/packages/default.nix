@@ -75,11 +75,11 @@ in
     # ─────────────────────────────────────────────────
     # Hardware & System Diagnostics
     # ─────────────────────────────────────────────────
-    pciutils
-    usbutils
-    dmidecode
-    smartmontools
-    alsa-utils
+    # pciutils
+    # usbutils
+    # dmidecode
+    # smartmontools
+    # alsa-utils
 
     # ─────────────────────────────────────────────────
     # Wayland / Desktop Utilities
