@@ -154,11 +154,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1788154427,
-        "narHash": "sha256-nCzmnj3rk60iznPMoDBg09b3wsDzEoGAjQj81QlsUTo=",
+        "lastModified": 1788194018,
+        "narHash": "sha256-L07VFChku0sRqtwSFyfFDFLpKPo77IPBOvrByqaTs5o=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "bee126157205f9e686e4f3f98d2cc3be1c1bf252",
+        "rev": "4912b92d37946ef6fd1d56cb4d2a0a0f09bd8c1c",
         "type": "github"
       },
       "original": {
@@ -175,11 +175,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788111006,
-        "narHash": "sha256-dCJZwWfwMtV0JhpyyhZDB66tgjK6EmrARUTmOj+7aH0=",
+        "lastModified": 1788180806,
+        "narHash": "sha256-veowX6t9Vo6nV6BzJ3YKSUDXgfgX8k8yHccd+6fYlBo=",
         "owner": "noctalia-dev",
         "repo": "noctalia-greeter",
-        "rev": "6839b96827fc93f8bbef6af9261bfd0903940230",
+        "rev": "b4e668d4f8aada549d5c990c3a18458fae8be6b9",
         "type": "github"
       },
       "original": {
@@ -243,11 +243,11 @@
         "xdg-desktop-portal-umbriel": "xdg-desktop-portal-umbriel"
       },
       "locked": {
-        "lastModified": 1788169130,
-        "narHash": "sha256-8kVcSbJdxphMuxAcJ2VOcqqf9AYuIHR665vNcK4svLU=",
+        "lastModified": 1788184796,
+        "narHash": "sha256-ZrC4QWA8wMynzI+fO9gMzqLTgiS5kTpKN0HEdxQnAMQ=",
         "ref": "refs/heads/main",
-        "rev": "c805544eade93d4ee8b27436ba1fa50309c919f4",
-        "revCount": 723,
+        "rev": "e677dbbe2728ee65156bdbcc6775b0b36b388b64",
+        "revCount": 727,
         "submodules": true,
         "type": "git",
         "url": "https://github.com/noctalia-dev/umbriel.git"
@@ -309,11 +309,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787930530,
-        "narHash": "sha256-tDvkYDYCbQhi2BG5wtpNjUHa7iUrTmctC87ukbNJ0y4=",
+        "lastModified": 1788191975,
+        "narHash": "sha256-1mKBFkIO9RA3ERsLo1QZhyvS6bFSjG1lBpegQnPbIUY=",
         "ref": "refs/heads/main",
-        "rev": "4edf049e4f9982bd7c3d6c92e25379308fdaa8df",
-        "revCount": 22,
+        "rev": "d996f0c2bd4e8c868c0a143f0c9ce060f3c47ed5",
+        "revCount": 23,
         "submodules": true,
         "type": "git",
         "url": "https://github.com/noctalia-dev/xdg-desktop-portal-umbriel.git"
