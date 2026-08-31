@@ -23,13 +23,11 @@ in
     # ─────────────────────────────────────────────────
     # Shell & Terminal
     # ─────────────────────────────────────────────────
-    zsh-powerlevel10k
     zellij
     ghostty
     btop
     fastfetch
     yazi
-    fzf
     ripgrep
     tree
     ncdu
