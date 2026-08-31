@@ -12,7 +12,7 @@
       init.defaultBranch = "main";
       pull.rebase = true;
       push.autoSetupRemote = true;
-      core.editor = "nvim";
+      core.editor = "${pkgs.zed-editor}/libexec/zed-editor --wait";
       core.hooksPath = "/etc/nixos-git-hooks";
       credential.helper = "store";
     };

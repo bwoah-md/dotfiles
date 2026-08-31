@@ -37,7 +37,7 @@
     shellAliases = {
       btop = "btop --force-utf";
       sudo = "sudo ";
-      v = "nvim";
+      # v = "nvim";
       ff = "fastfetch";
 
       nixadd     = "git -C ~/.config/nixos add -A";
@@ -51,7 +51,7 @@
       nixflake   = "nix flake update --flake ~/.config/nixos";
 
       docker-start = "sudo systemctl start docker";
-      docker-stop  = "sudo systemctl start docker";
+      docker-stop  = "sudo systemctl stop docker";
       win          = "sdl-freerdp /u:\"icy\" /p:\"1771\" /v:127.0.0.1:3389 /cert:ignore /dynamic-resolution +clipboard /sound /microphone +home-drive";
       win-start    = "sudo systemctl start docker && docker start windows";
       win-stop     = "docker stop windows && sudo systemctl stop docker";
@@ -62,6 +62,11 @@
       export FZF_BASE="${pkgs.fzf}/share/fzf"
 
       [[ -f ~/.config/fzf/themes/noctalia.sh ]] && source ~/.config/fzf/themes/noctalia.sh
+
+      # Launch Zed completely detached
+      zed() {
+        ${pkgs.zed-editor}/libexec/zed-editor "$@" >/dev/null 2>&1 &!
+      }
 
       nixfrost() {
         local day=$(date +%-d)
