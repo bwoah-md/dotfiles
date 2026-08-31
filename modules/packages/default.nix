@@ -120,6 +120,5 @@ in
     # Applications
     # ─────────────────────────────────────────────────
     obsidian
-    whitesur-icon-theme
   ];
 }
