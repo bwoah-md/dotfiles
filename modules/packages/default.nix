@@ -53,6 +53,9 @@ in
     python3
     jq
     gcc
+    fd
+    lazygit
+    tree-sitter
 
     # ─────────────────────────────────────────────────
     # Browsers
