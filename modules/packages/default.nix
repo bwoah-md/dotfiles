@@ -56,6 +56,7 @@ in
     fd
     lazygit
     tree-sitter
+    imagemagick
 
     # ─────────────────────────────────────────────────
     # Browsers
