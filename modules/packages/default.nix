@@ -29,6 +29,7 @@ in
     btop
     fastfetch
     yazi
+    fzf
     ripgrep
     tree
     ncdu
