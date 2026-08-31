@@ -12,6 +12,11 @@
     extraGroups = [ "networkmanager" "wheel" "video" "audio" "docker" "kvm" ];
   };
 
+  programs.fzf = {
+    fuzzyCompletion = true;
+    keybindings = true;
+  };
+
   programs.zsh = {
     enable = true;
     autosuggestions.enable = true;
@@ -54,6 +59,8 @@
 
     shellInit = ''
       export PATH="$HOME/.local/bin:$PATH"
+
+      [[ -f ~/.config/fzf/themes/noctalia.sh ]] && source ~/.config/fzf/themes/noctalia.sh
 
       nixfrost() {
         local day=$(date +%-d)
