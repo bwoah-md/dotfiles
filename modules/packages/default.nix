@@ -53,12 +53,12 @@ in
     # ─────────────────────────────────────────────────
     # Neovim Tools
     # ─────────────────────────────────────────────────
-    gcc
-    neovim
-    fd
-    lazygit
-    tree-sitter
-    imagemagick
+    # gcc
+    # neovim
+    # fd
+    # lazygit
+    # tree-sitter
+    # imagemagick
 
     # ─────────────────────────────────────────────────
     # Browsers
