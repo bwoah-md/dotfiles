@@ -40,7 +40,6 @@
       v = "nvim";
       ff = "fastfetch";
 
-      # NixOS Git Workflow
       nixadd     = "git -C ~/.config/nixos add -A";
       nixcommit  = "git -C ~/.config/nixos commit -m";
       nixpush    = "git -C ~/.config/nixos push origin main";
@@ -51,7 +50,6 @@
       nixclean   = "sudo nix-collect-garbage -d && nix-collect-garbage -d";
       nixflake   = "nix flake update --flake ~/.config/nixos";
 
-      # Container / VM controls
       docker-start = "sudo systemctl start docker";
       docker-stop  = "sudo systemctl start docker";
       win          = "sdl-freerdp /u:\"icy\" /p:\"1771\" /v:127.0.0.1:3389 /cert:ignore /dynamic-resolution +clipboard /sound /microphone +home-drive";
@@ -61,6 +59,7 @@
 
     shellInit = ''
       export PATH="$HOME/.local/bin:$PATH"
+      export FZF_BASE="${pkgs.fzf}/share/fzf"
 
       [[ -f ~/.config/fzf/themes/noctalia.sh ]] && source ~/.config/fzf/themes/noctalia.sh
 
@@ -91,5 +90,10 @@
       enable = true;
       plugins = [ "git" "sudo" "copypath" ];
     };
+
+    promptInit = ''
+      source ${pkgs.fzf}/share/fzf/key-bindings.zsh
+      source ${pkgs.fzf}/share/fzf/completion.zsh
+    '';
   };
 }
