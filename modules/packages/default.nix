@@ -49,6 +49,7 @@ in
     nodejs
     python3
     jq
+    sshfs
 
     # ─────────────────────────────────────────────────
     # Neovim Tools
