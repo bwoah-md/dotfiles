@@ -58,7 +58,7 @@
     ];
     fontconfig = {
       defaultFonts = {
-        monospace = [ "Maple Mono NF CN" "JetBrainsMono Nerd Font" "Noto Sans Mono" ];
+        monospace = [ "Annotation Mono" "Maple Mono NF CN" "JetBrainsMono Nerd Font" "Noto Sans Mono" ];
         sansSerif = [ "Noto Sans" "Noto Sans CJK SC" ];
         serif = [ "Noto Serif" "Noto Serif CJK SC" ];
         emoji = [ "Noto Color Emoji" ];
