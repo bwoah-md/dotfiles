@@ -54,6 +54,7 @@
       font-awesome
       undefined-medium
       terminus_font_ttf
+      annotation-mono
     ];
     fontconfig = {
       defaultFonts = {
