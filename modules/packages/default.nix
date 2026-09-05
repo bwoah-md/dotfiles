@@ -42,6 +42,7 @@ in
     # Development
     # ─────────────────────────────────────────────────
     zed-editor
+    helix
     nixd
     nil
     nixfmt

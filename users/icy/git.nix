@@ -12,7 +12,7 @@
       init.defaultBranch = "main";
       pull.rebase = true;
       push.autoSetupRemote = true;
-      core.editor = "${pkgs.zed-editor}/libexec/zed-editor --wait";
+      core.editor = "${pkgs.helix}/bin/hx";
       core.hooksPath = "/etc/nixos-git-hooks";
       credential.helper = "store";
     };
