@@ -25,6 +25,7 @@ in
     # ─────────────────────────────────────────────────
     zellij
     ghostty
+    kitty
     btop
     fastfetch
     yazi
