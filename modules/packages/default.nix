@@ -26,6 +26,7 @@ in
     zellij
     ghostty
     kitty
+    foot
     btop
     fastfetch
     yazi
