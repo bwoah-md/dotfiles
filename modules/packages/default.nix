@@ -12,6 +12,9 @@ in
     NIXPKGS_ALLOW_UNFREE = "1";
   };
 
+  # Disable NixOS's default Nano package
+   programs.nano.enable = false;
+
   environment.systemPackages = with pkgs; [
     # ─────────────────────────────────────────────────
     # Custom Packages
@@ -46,6 +49,7 @@ in
     zed-editor
     helix
     fresh-editor
+    micro
     nixd
     nil
     nixfmt
