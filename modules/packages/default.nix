@@ -45,6 +45,7 @@ in
     # ─────────────────────────────────────────────────
     zed-editor
     helix
+    fresh-editor
     nixd
     nil
     nixfmt
