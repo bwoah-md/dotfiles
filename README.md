@@ -1,4 +1,3 @@
-````markdown
 # icy@dotfiles
 
 Personal configuration files for `icy`, maintained separately from the NixOS system configuration.
