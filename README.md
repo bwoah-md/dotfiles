@@ -1,6 +1,6 @@
 # icy@dotfiles
 
-Personal configuration files for `icy`, maintained separately from the NixOS system configuration.
+Personal configuration files which are maintained separately from the NixOS system configuration.
 
 This repository contains the application-level configuration that lives under `~/.config`, along with `~/.zshrc`.
 
@@ -110,7 +110,7 @@ Noctalia is responsible for parts of the overall desktop theming and provides th
 
 If you use Noctalia, configure it to use the custom themes contained in this repository where applicable.
 
-If you **do not** use Noctalia, some applications will need to be manually configured to match your preferred theme.
+> **<u>NOTE</u>**: If you **do not** use Noctalia, some applications will need to be manually configured to match your preferred theme.
 
 The applications that may require manual theme configuration are:
 
