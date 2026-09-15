@@ -1,0 +1,17 @@
+# Editor / OS junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Secrets / credentials
+.env
+.env.*
+*.secret
+*.secrets

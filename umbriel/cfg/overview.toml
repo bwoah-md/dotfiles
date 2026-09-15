@@ -1,0 +1,16 @@
+[overview]
+# Workspace scale when fully zoomed out (0.1-0.75)
+zoom = 0.5
+background_blur = true
+shortcuts = true
+shortcut_keys = "abcdefghijklmnopqrstuvwxyz"
+workspace_wallpaper = true
+
+[colors.overview]
+# FIXED — background_tint and workspace_background moved out of [overview]
+# and into [colors.overview]. Same "unknown key" fix as appearance.toml —
+# values unchanged, just relocated to match the current schema.
+# Tint composited over the desktop background (Alpha 00 to FF)
+background_tint = "#10101430"
+# Rounded background behind each workspace (Mimics Niri's workspace-shadow)
+workspace_background = "#00000044"

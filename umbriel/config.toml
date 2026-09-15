@@ -1,0 +1,17 @@
+[include]
+files = [
+  "cfg/animation.toml",
+  "cfg/appearance.toml",
+  "cfg/autostart.toml",
+  "cfg/hot-corners.toml",
+  "cfg/input.toml",
+  "cfg/keybinds.toml",
+  "cfg/layer-rule.toml",
+  "cfg/layout.toml",
+  "cfg/outputs.toml",
+  "cfg/overview.toml",
+  "cfg/workspaces.toml",
+  "cfg/rules.toml",
+  "cfg/events.toml",
+  "noctalia.toml",
+]

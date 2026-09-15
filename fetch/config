@@ -1,0 +1,37 @@
+# fields – list to show, in this order
+# remove or comment out to hide
+os
+kernel
+packages
+shell
+wm
+# displaymanager
+terminal
+memory
+disk
+colors
+
+# extra disks (add more mount points)
+# disk=/home
+# disk=/data
+
+# appearance
+# label_color=magenta   (red, green, yellow, blue, magenta, cyan, white)
+# separator=-           (character for the title separator)
+# shading_mode=ascii    (ascii, or opt into blocks / sextants)
+# shading=.,-~:;=!*#$@  (characters for 3D shading, supports UTF-8)
+box=0                (adds a box around the system-data, 0 = off, 1 = on)
+
+# logo colors (override distro defaults)
+# logo_outer=magenta    (extruded side color)
+# logo_inner=magenta      (front/back face color)
+
+# 3d
+# light=top-left        (top-left, top-right, top, left, right, front, bottom-left, bottom-right)
+# spin=xy               (x, y, or xy)
+# speed=0             (rotation speed)
+# size=1.0              (logo scale, e.g. 2.0 for double size)
+# depth=1.0             (3D extrusion depth, e.g. 3.0 for chunkier look)
+# height=36             (override render height in rows)
+# v_alignment=top       (top, center, bottom)
+# h_alignment=left      (left, center, right)

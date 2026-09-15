@@ -1,0 +1,12 @@
+/* Apply Annotation Mono globally across primary UI elements */
+:root {
+  --font-primary: "Annotation Mono", monospace !important;
+  --font-display: "Annotation Mono", monospace !important;
+  --font-code: "Annotation Mono", monospace !important;
+  --font-headline: "Annotation Mono", monospace !important;
+}
+
+/* Force apply to all elements in case specific components bypass root vars */
+* {
+  font-family: "Annotation Mono", monospace !important;
+}

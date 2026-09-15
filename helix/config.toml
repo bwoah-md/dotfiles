@@ -1,0 +1,29 @@
+theme = "noctalia"
+
+[editor]
+line-number = "relative"
+shell = ["zsh", "-c"]
+
+[editor.statusline]
+left = ["mode","separator", "file-name", "spacer", "version-control", "spacer", "spinner"]
+center = []
+right = ["diagnostics", "selections", "position"]
+separator = "┃"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+newline = "none"
+
+[editor.indent-guides]
+render = true
+character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽", "╎"
+skip-levels = 1

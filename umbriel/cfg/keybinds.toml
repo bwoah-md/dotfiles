@@ -1,0 +1,157 @@
+[keybinds]
+
+# ── Applications ──
+"Mod+Return" = "spawn:foot"
+"Mod+Ctrl+E" = "spawn:foot --class=yazi.filemanager -e yazi"
+"Mod+B" = "spawn:zen-twilight"
+"Mod+E" = "spawn:nautilus --new-window"
+
+# ── Panels ──
+"Mod+Space" = "spawn:noctalia msg panel-toggle launcher"
+"Mod+Tab" = "spawn:noctalia msg window-switcher"
+"Mod+Alt+Space" = "spawn:noctalia msg panel-toggle control-center"
+"Mod+N" = "spawn:noctalia msg panel-toggle control-center notifications"
+"Mod+A" = "spawn:noctalia msg panel-toggle control-center audio"
+"Mod+Ctrl+V" = "spawn:noctalia msg panel-toggle clipboard"
+"Mod+Ctrl+N" = "spawn:noctalia msg panel-toggle noctalia/notes:panel"
+"Mod+Shift+N" = "spawn:noctalia msg panel-toggle nightwatch75/todo:panel"
+"Mod+Y" = "spawn:noctalia msg panel-toggle aabidk20/yt-music:panel"
+"Mod+Shift+C" = "spawn:noctalia msg plugin oldirtty/color_picker:service all pick -alq"
+"Mod+Ctrl+Shift+C" = "spawn:noctalia msg panel-toggle oldirtty/color_picker:panel -alq"
+"Ctrl+Shift+Escape" = "spawn:noctalia msg panel-toggle session"
+"Mod+SemiColon" = "spawn:noctalia msg panel-toggle launcher \";e \""
+
+# ── Media ──
+"XF86AudioRaiseVolume" = { action = "spawn:qs -c noctalia-shell ipc call volume increase", allow_when_locked = true }
+"XF86AudioLowerVolume" = { action = "spawn:qs -c noctalia-shell ipc call volume decrease", allow_when_locked = true }
+"XF86AudioMute" = { action = "spawn:qs -c noctalia-shell ipc call volume muteOutput", allow_when_locked = true }
+"XF86AudioMicMute" = { action = "spawn:qs -c noctalia-shell ipc call volume muteInput", allow_when_locked = true }
+"XF86AudioNext" = { action = "spawn:qs -c noctalia-shell ipc call media next", allow_when_locked = true }
+"XF86AudioPrev" = { action = "spawn:qs -c noctalia-shell ipc call media previous", allow_when_locked = true }
+"XF86AudioPlay" = { action = "spawn:qs -c noctalia-shell ipc call media playPause", allow_when_locked = true }
+"XF86AudioPause" = { action = "spawn:qs -c noctalia-shell ipc call media playPause", allow_when_locked = true }
+
+# ── Brightness ──
+"XF86MonBrightnessUp" = { action = "spawn:qs -c noctalia-shell ipc call brightness increase", allow_when_locked = true }
+"XF86MonBrightnessDown" = { action = "spawn:qs -c noctalia-shell ipc call brightness decrease", allow_when_locked = true }
+
+# ── Screenshots & Recording ──
+"Ctrl+Shift+1" = "spawn:noctalia msg screenshot-region"
+"Ctrl+Shift+2" = "spawn:noctalia msg screenshot-fullscreen"
+"Ctrl+Shift+3" = "spawn:noctalia msg screenshot-fullscreen pick"
+"Ctrl+Shift+4" = "spawn:noctalia msg screenshot-fullscreen all"
+"Mod+Shift+R" = "spawn:noctalia msg plugin noctalia/screen_recorder:service all toggle"
+
+# ── Window Focus ──
+"Mod+H" = "window-focus-left"
+"Mod+Left" = "window-focus-left"
+"Mod+L" = "window-focus-right"
+"Mod+Right" = "window-focus-right"
+"Mod+Up" = "window-focus-up"
+"Mod+Down" = "window-focus-down"
+"Mod+Home" = "column-focus-first"
+"Mod+End" = "column-focus-last"
+"Mod+BracketRight" = "window-focus-next"
+"Alt+Tab" = "window-focus-last"
+"Mod+Shift+T" = "window-focus-switch-floating"
+
+# ── Window Actions ──
+"Mod+Q" = "window-close"
+"Mod+T" = "window-toggle-floating"
+"Mod+F" = "window-toggle-maximize"
+"Mod+M" = "window-toggle-maximize-to-edges"
+"Mod+Ctrl+F" = "window-toggle-fullscreen"
+"Mod+Ctrl+P" = "window-toggle-pinned"
+"Mod+Alt+C" = "column-center"
+"Mod+S" = "window-set-width:0.5"
+"Mod+Shift+F" = "window-cycle-width"
+"Mod+Shift+Ctrl+F" = "window-cycle-width-back"
+"Mod+Minus" = "window-modify-width:-0.1"
+"Mod+Equal" = "window-modify-width:+0.1"
+"Mod+Shift+Minus" = "window-modify-height:-0.1"
+"Mod+Shift+Equal" = "window-modify-height:+0.1"
+"Mod+Comma" = "window-consume-or-expel-left"
+"Mod+Period" = "window-consume-or-expel-right"
+"Mod+C" = "window-center"
+
+# ── Window Movement ──
+"Mod+Ctrl+H" = "column-move-left"
+"Mod+Ctrl+Left" = "column-move-left"
+"Mod+Ctrl+L" = "column-move-right"
+"Mod+Ctrl+Right" = "column-move-right"
+"Mod+Ctrl+Up" = "window-move-up"
+"Mod+Ctrl+Down" = "window-move-down"
+"Mod+Ctrl+Home" = "column-move-to-first"
+"Mod+Ctrl+End" = "column-move-to-last"
+"Mod+Shift+Ctrl+Left" = "column-move-to-output-left"
+"Mod+Shift+Ctrl+Right" = "column-move-to-output-right"
+
+# ── Workspaces ──
+"Mod+K" = "workspace-previous"
+"Mod+J" = "workspace-next"
+"Mod+WheelDown" = "workspace-next"
+"Mod+WheelUp" = "workspace-previous"
+"Mod+Page_Down" = "workspace-next"
+"Mod+Page_Up" = "workspace-previous"
+"Mod+Shift+Page_Down" = "workspace-move-down"
+"Mod+Shift+Page_Up" = "workspace-move-up"
+
+"Mod+1" = "workspace-switch:1"
+"Mod+2" = "workspace-switch:2"
+"Mod+3" = "workspace-switch:3"
+"Mod+4" = "workspace-switch:4"
+"Mod+5" = "workspace-switch:5"
+"Mod+6" = "workspace-switch:6"
+"Mod+7" = "workspace-switch:7"
+"Mod+8" = "workspace-switch:8"
+"Mod+9" = "workspace-switch:9"
+
+"Mod+Ctrl+K" = "window-move-to-workspace-previous"
+"Mod+Ctrl+J" = "window-move-to-workspace-next"
+"Mod+Ctrl+WheelDown" = "window-move-to-workspace-next"
+"Mod+Ctrl+WheelUp" = "window-move-to-workspace-previous"
+
+"Mod+Ctrl+1" = "window-move-to-workspace:1"
+"Mod+Ctrl+2" = "window-move-to-workspace:2"
+"Mod+Ctrl+3" = "window-move-to-workspace:3"
+"Mod+Ctrl+4" = "window-move-to-workspace:4"
+"Mod+Ctrl+5" = "window-move-to-workspace:5"
+"Mod+Ctrl+6" = "window-move-to-workspace:6"
+"Mod+Ctrl+7" = "window-move-to-workspace:7"
+"Mod+Ctrl+8" = "window-move-to-workspace:8"
+"Mod+Ctrl+9" = "window-move-to-workspace:9"
+
+# ── Scroll Navigation ──
+"Mod+Shift+WheelDown" = "window-focus-right"
+"Mod+Shift+WheelUp" = "window-focus-left"
+"Mod+WheelRight" = "window-focus-right"
+"Mod+WheelLeft" = "window-focus-left"
+"Mod+Ctrl+Shift+WheelDown" = "column-move-right"
+"Mod+Ctrl+Shift+WheelUp" = "column-move-left"
+"Mod+Ctrl+WheelRight" = "column-move-right"
+"Mod+Ctrl+WheelLeft" = "column-move-left"
+
+# ── Layouts ──
+"Mod+Shift+L" = "workspace-set-layout:toggle"
+"Mod+Shift+D" = "workspace-set-layout:dwindle"
+"Mod+Shift+S" = "workspace-set-layout:scrolling"
+"Mod+Shift+M" = "workspace-set-layout:master"
+"Mod+Ctrl+Equal" = "layout-master-count-increase"
+"Mod+Ctrl+Minus" = "layout-master-count-decrease"
+
+# ── Outputs ──
+"Mod+Shift+Left" = "output-focus-left"
+"Mod+Shift+Right" = "output-focus-right"
+"Mod+P" = '''spawn:bash -c "if grep -q 'enabled = true' ~/.config/umbriel/cfg/outputs.toml; then sed -i 's/enabled = true/enabled = false/' ~/.config/umbriel/cfg/outputs.toml; else sed -i 's/enabled = false/enabled = true/' ~/.config/umbriel/cfg/outputs.toml; fi"'''
+
+# ── Scratchpad ──
+"Mod+Shift+Space" = "scratchpad-toggle"
+"Mod+Ctrl+Backspace" = "window-restore-from-scratchpad"
+"Mod+Shift+Backspace" = "window-move-to-scratchpad"
+"Mod+Shift+Tab" = "scratchpad-focus-next"
+
+# ── System ──
+"Mod+W" = { action = "overview-toggle", repeat = false }
+"Mod+Shift+P" = "dpms-off"
+"Mod+F11" = { action = "submap:passthrough", repeat = false }
+"submap[passthrough],Mod+F11" = "submap:reset"

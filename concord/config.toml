@@ -1,0 +1,35 @@
+[display]
+disable_image_preview = false
+show_avatars = true
+show_images = true
+media_playback = true
+image_preview_quality = "original"
+attachment_viewer_quality = "original"
+image_protocol = "sixel" # use "kitty" for ghostty and kitty and "sixel" for foot
+show_custom_emoji = true
+circular_avatars = false
+
+[composer]
+emojis_as_links = true
+ping_on_reply = true
+
+[credentials]
+store = "auto"
+
+[notifications]
+desktop_notifications = true
+notification_icon = "/path/to/icon.svg"
+notification_sound = "/path/to/message.wav"
+voice_join_sound = "/path/to/join.wav"
+voice_leave_sound = "/path/to/leave.wav"
+
+[voice]
+self_mute = true
+self_deaf = false
+allow_microphone_transmit = true
+microphone_sensitivity = -30
+microphone_volume = 100
+voice_output_volume = 100
+
+[presence]
+share_rich_presence = true

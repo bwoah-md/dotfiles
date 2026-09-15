@@ -1,0 +1,88 @@
+# ══════════════════════════════════════════════════════
+# Window Rules
+# ══════════════════════════════════════════════════════
+
+# ─── Global ───
+[[window_rule]]
+blur = true
+blur_optimized = false
+opacity = 0.9
+
+# ─── Noctalia / Umbriel ───
+[[window_rule]]
+match.app_id = "^dev.noctalia.Noctalia$"
+default_floating = true
+default_size = [1020, 900]
+# blur_popups = false   # uncomment to leave popups unblurred
+
+[[window_rule]]
+match.app_id = "^dev.noctalia.UmbrielSharePicker$"
+default_floating = true
+default_size = [800, 600]
+default_position = { x = 32, y = 32, anchor = "center" }
+
+[[window_rule]]
+match.app_id = "^xdg-desktop-portal-gtk$"
+default_floating = true
+default_size = [800, 600]
+default_position = { x = 0, y = 0, anchor = "center" }
+
+# ─── Picture-in-Picture (for Browsers) ───
+[[window_rule]]
+match.title = "^(Picture-in-Picture|Picture in picture)$"
+default_floating = true
+default_size = [480, 270]
+default_output = "HDMI-A-1"
+opacity = 1.0
+default_position = { x = 10, y = 10, anchor = "bottom_right" }
+default_focused = false
+default_pinned = true
+
+# ─── Yazi (via ghostty --class) ───
+[[window_rule]]
+match.app_id = "^yazi\\.filemanager$"
+default_floating = true
+default_size = [1100, 700]
+default_position = { x = 0, y = 0, anchor = "center" }
+
+# ─── General Floating ───
+[[window_rule]]
+match.app_id = "^(dev\\.lemmy\\.swash|Mullvad Browser|Tor Browser|org\\.kde\\.kdeconnect\\.handler|org\\.kde\\.kdeconnect\\.daemon|com\\.rafaelmardojai\\.Blanket)$"
+default_floating = true
+
+# ─── Custom Floating & Sized ───
+[[window_rule]]
+match.app_id = "^org.localsend.localsend_app$"
+default_floating = true
+default_size = [800, 600]
+
+[[window_rule]]
+match.app_id = "^com\\.obsproject\\.Studio$"
+default_floating = true
+default_size = [1100, 800]
+
+[[window_rule]]
+match.app_id = "^scrcpy$"
+opacity = 1.0
+default_floating = true
+default_size = [468, 1039]
+
+[[window_rule]]
+match.app_id = "^nwg-look$"
+default_floating = true
+default_size = [761, 459]
+
+[[window_rule]]
+match.app_id = "^wlfreerdp$"
+opacity = 1.0
+
+# ─── Opaque Floating ───
+[[window_rule]]
+match.app_id = "^(com\\.interversehq\\.qView|mpv)$"
+opacity = 1.0
+default_floating = true
+
+# ─── Open Maximized ───
+[[window_rule]]
+match.app_id = "^(org\\.qutebrowser\\.qutebrowser|equibop||chrome-web\\.whatsapp\\.com__-Default|org\\.telegram\\.desktop|dev\\.zed\\.Zed)$"
+default_maximize = true

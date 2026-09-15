@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>~/homepage</title>
+    <link rel="stylesheet" type="text/css" href="colors.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-container">
+            <div class="gif">
+                <img id="cat" src="cat-transparent.gif" />
+            </div>
+        </div>
+
+        <div class="right-container">
+            <div class="head">
+                <p>&gt; icy@nix ~/<span class="blinking">_</span></p>
+            </div>
+
+            <div class="bookmarks">
+                <div class="category">
+                    <ul class="links">
+                        <li class="title">personal/</li>
+                        <li><a href="https://mail.google.com/mail/u/1/#inbox">gmail</a></li>
+                        <li><a href="https://mail.proton.me/u/1/inbox#category=primary">proton mail</a></li>
+                        <li><a href="https://www.linkedin.com/feed/">linkedin</a></li>
+                        <li><a href="https://github.com/bwoah-md/nixbtw">nixbtw</a></li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <ul class="links">
+                        <li class="title">docs/</li>
+                        <li><a href="https://nixos.org/manual/nixos/unstable">nix</a></li>
+                        <li><a href="https://docs.helix-editor.com/">helix</a></li>
+                        <li><a href="https://qutebrowser.org/doc/help/">qutebrowser</a></li>
+                        <li><a href="https://docs.noctalia.dev">noctalia</a></li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <ul class="links">
+                        <li class="title">links/</li>
+                        <li><a href="https://reddit.com/r/unixporn">r/unixporn</a></li>
+                        <li><a href="https://fmhy.net/">fmhy</a></li>
+                        <li><a href="https://wallhaven.cc/">wallhaven</a></li>
+                        <li><a href="https://letterboxd.com/">letterboxd</a></li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <ul class="links">
+                        <li class="title">ai/</li>
+                        <li><a href="https://gemini.google.com/">gemini</a></li>
+                        <li><a href="https://claude.ai/">claude</a></li>
+                        <li><a href="https://chatgpt.com/">chatgpt</a></li>
+                        <li><a href="https://chat.qwen.ai">qwen</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const bg = getComputedStyle(document.documentElement)
+        .getPropertyValue('--color-bg')
+        .trim();
+
+    const rgb = bg.match(/\w\w/g).map(x => parseInt(x, 16));
+
+    const brightness =
+        (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
+
+    if (brightness < 128) {
+        document.getElementById('cat').classList.add('dark-cat');
+    }
+    </script>
+
+</body>
+
+</html>

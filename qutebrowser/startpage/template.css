@@ -1,0 +1,10 @@
+/* Noctalia startpage colors - auto-generated from matugen color schemes */
+:root {
+  --color-bg: {{colors.surface.default.hex}};
+  --color-fg: {{colors.on_surface.default.hex}};
+  --color-primary: {{colors.primary.default.hex}};
+  --color-secondary: {{colors.secondary.default.hex}};
+  --color-tertiary: {{colors.tertiary.default.hex}};
+  --color-link-visited: {{colors.on_surface_variant.default.hex}};
+  --cat-filter: none;
+}

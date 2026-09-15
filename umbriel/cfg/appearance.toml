@@ -1,0 +1,35 @@
+[appearance]
+prefer_no_csd = true
+border_width = 1
+outer_border_width = 0
+corner_radius = 0
+drag_opacity = 0.75
+
+# Colors
+
+# border_focused = "#7AA3FFFF"
+# border_unfocused = "#292933FF"
+# scratchpad_border_focused = "#E5C07BFF"
+# scratchpad_border_unfocused = "#5C4A2AFF"
+# outer_border_color = "#1A1A1FFF"
+# insert_hint_color = "#7FC8FF80"
+
+[colors]
+backdrop = "#00000000"
+shadow = "#0000007F"
+
+[appearance.blur]
+enabled = true
+optimized = false
+passes = 3
+radius = 3
+noise = 0.0
+saturation = 1.5
+brightness = 0.9
+contrast = 0.9
+
+[appearance.shadow]
+enabled = true
+softness = 70
+offset_x = 5
+offset_y = 5

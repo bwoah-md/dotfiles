@@ -1,0 +1,117 @@
+html, body {
+  background: transparent;
+  color: var(--color-fg);
+  font-family: "Terminess Nerd Font", monospace;
+  /* font-family: monospace; */
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 460px 600px 1fr;
+  grid-template-areas:
+    ". left right .";
+  column-gap: 80px;
+  justify-items: start;
+  align-items: center;
+  min-height: 100%;
+}
+
+.left-container {
+  grid-area: left;
+  aspect-ratio: 1/1;
+}
+
+.right-container {
+  grid-area: right;
+  height: 50%;
+  width: 100%;
+}
+
+.gif img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 40px;
+  padding-top: 60px;
+  color: var(--color-primary);
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  text-align: left;
+}
+
+.bookmarks {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.title {
+  font-size: 20px;
+  color: var(--color-tertiary);
+  font-weight: 600;
+}
+
+li {
+  font-size: 16px;
+  list-style-type: none;
+  padding: 5px;
+  text-align: left;
+}
+
+a:link {
+  text-decoration: none;
+  color: var(--color-secondary);
+}
+
+a:visited {
+  color: var(--color-link-visited);
+}
+
+a:hover {
+  color: var(--color-tertiary);
+}
+
+.blinking {
+  animation: opacity 1s ease-in-out infinite;
+  opacity: 1;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.dark-cat {
+  filter: invert(1);
+  opacity: 0.3;
+}
