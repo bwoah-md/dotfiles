@@ -19,7 +19,6 @@ The live configurations remain in their normal locations under `~/.config`. This
 ├── kitty/
 ├── mpv/
 ├── qutebrowser/
-├── surge/
 ├── umbriel/
 ├── winapps/
 └── zed/
@@ -64,7 +63,6 @@ The main projects and resources used by this setup:
 | Kitty          | [github.com/kovidgoyal/kitty](https://github.com/kovidgoyal/kitty)                       |
 | MPV            | [mpv.io](https://mpv.io/)                                                                |
 | Qutebrowser    | [qutebrowser.org](https://qutebrowser.org)                                               |
-| Surge          | [github.com/SurgeDM/Surge](https://github.com/SurgeDM/Surge)                             |
 | Umbriel        | [github.com/noctalia-dev/umbriel](https://github.com/noctalia-dev/umbriel)               |
 | WinApps        | [github.com/winapps-org/winapps](https://github.com/winapps-org/winapps)                 |
 | Zed            | [zed.dev](https://zed.dev/)                                                              |
@@ -87,7 +85,6 @@ Not included:
 * Qutebrowser `autoconfig.yml`
 * Qutebrowser Noctalia-specific configuration
 * Umbriel `noctalia.toml`
-* Surge keymap/settings
 * MPV shaders
 * Kitty themes
 * Helix themes
