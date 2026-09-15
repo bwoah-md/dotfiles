@@ -6,12 +6,13 @@
 
 alias dot='cd ~/.dotfiles'
 
-alias dot-status='git -C ~/.dotfiles status'
-alias dot-diff='git -C ~/.dotfiles diff'
-alias dot-add='git -C ~/.dotfiles add -A'
-alias dot-push='git -C ~/.dotfiles push'
-alias dot-log='git -C ~/.dotfiles log --oneline --decorate --graph'
-alias dot-remote='git -C ~/.dotfiles remote -v'
+alias dotstatus='git -C ~/.dotfiles status'
+alias dotdiff='git -C ~/.dotfiles diff'
+alias dotadd='git -C ~/.dotfiles add -A'
+alias dotpush='git -C ~/.dotfiles push'
+alias dotlog='git -C ~/.dotfiles log --oneline --decorate --graph'
+alias dotremote='git -C ~/.dotfiles remote -v'
+alias dotrestore='cp -r ~/.dotfiles/* ~/.config/ && cp ~/.dotfiles/.zshrc ~/.zshrc'
 
 dotfrost() {
     local repo="$HOME/.dotfiles"
