@@ -6,8 +6,6 @@ This repository contains the application-level configuration that lives under `~
 
 The live configurations remain in their normal locations. This repository is a **manual copy-based backup and version-control repository** — no symlinks and no automatic synchronization.
 
----
-
 ## Structure
 
 ```text
@@ -102,8 +100,6 @@ The live configurations remain in their normal locations. This repository is a *
     └── settings.json
 ````
 
----
-
 ## Theme & Noctalia Shell
 
 This repository is heavily tied to the theme setup used on my system.
@@ -130,8 +126,6 @@ The applications that may require manual theme configuration are:
 
 The repository intentionally does **not** contain the Noctalia configuration itself.
 
----
-
 ## What's Included
 
 ### Concord
@@ -143,9 +137,7 @@ concord/
 └── theme.toml
 ```
 
-Contains the main Concord configuration, keybindings, and theme.
-
----
+Contains the main [Concord](https://github.com/chojs23/concord) configuration, keybindings, and theme.
 
 ### Equibop
 
@@ -156,9 +148,7 @@ equibop/
     └── settings.json
 ```
 
-Contains Equibop settings and custom CSS.
-
----
+Contains [Equibop](https://equibop.org/) settings and custom CSS.
 
 ### Fastfetch
 
@@ -168,9 +158,7 @@ fastfetch/
 └── nixos-small.txt
 ```
 
-Contains the Fastfetch configuration and the custom NixOS ASCII art.
-
----
+Contains the [Fastfetch](https://github.com/fastfetch-cli/fastfetch) configuration and the custom NixOS ASCII art.
 
 ### Fetch
 
@@ -179,9 +167,7 @@ fetch/
 └── config
 ```
 
-Contains the Fetch configuration.
-
----
+Contains the [Fetch](https://github.com/areofyl/fetch) configuration.
 
 ### Foot
 
@@ -190,9 +176,7 @@ foot/
 └── foot.ini
 ```
 
-Contains the Foot terminal configuration.
-
----
+Contains the [Foot](https://codeberg.org/dnkl/foot) terminal configuration.
 
 ### Ghostty
 
@@ -204,9 +188,7 @@ ghostty/
     └── cursor_wrap.glsl
 ```
 
-Contains the Ghostty configuration and custom cursor shaders.
-
----
+Contains the [Ghostty](https://ghostty.org/) configuration and custom cursor shaders.
 
 ### Helix
 
@@ -215,9 +197,7 @@ helix/
 └── config.toml
 ```
 
-Contains the Helix editor configuration.
-
----
+Contains the [Helix](https://helix-editor.com/) editor configuration.
 
 ### Kitty
 
@@ -226,9 +206,7 @@ kitty/
 └── kitty.conf
 ```
 
-Contains the Kitty terminal configuration.
-
----
+Contains the [Kitty](https://github.com/kovidgoyal/kitty) terminal configuration.
 
 ### MPV
 
@@ -248,7 +226,7 @@ mpv/
     └── thumbfast.lua
 ```
 
-Contains the MPV configuration, Material OSC files, scripts, script options, and fonts.
+Contains the [MPV](https://mpv.io/) configuration, [Material OSC](https://github.com/brahmkshatriya/material-osc) files, scripts, script options, and fonts.
 
 ### MPV Shaders
 
@@ -256,9 +234,7 @@ The MPV shaders are **not included in this repository**.
 
 For Anime4K and its shader installation/configuration instructions, see:
 
-[https://github.com/bloc97/Anime4K](https://github.com/bloc97/Anime4K)
-
----
+[github/bloc97/Anime4K](https://github.com/bloc97/Anime4K)
 
 ### Qutebrowser
 
@@ -284,11 +260,9 @@ qutebrowser/
     └── youtube-tweaks.css
 ```
 
-Contains the Qutebrowser configuration, bookmarks, quickmarks, userscripts, custom start page, and custom styles.
+Contains the [Qutebrowser](https://qutebrowser.org) configuration, bookmarks, quickmarks, userscripts, custom start page, and custom styles.
 
 Qutebrowser's automatically generated `autoconfig.yml` is intentionally excluded.
-
----
 
 ### Surge
 
@@ -304,9 +278,7 @@ surge/
     └── surge.toml
 ```
 
-Other Surge configuration files are intentionally excluded.
-
----
+Other [Surge](https://github.com/SurgeDM/Surge) configuration files are intentionally excluded.
 
 ### Umbriel
 
@@ -334,11 +306,9 @@ umbriel/
     └── watr.glsl
 ```
 
-Contains the main Umbriel configuration, individual configuration modules, and shaders.
+Contains the main [Umbriel](https://github.com/noctalia-dev/umbriel) configuration, individual configuration modules, and shaders.
 
 The Noctalia-specific Umbriel configuration is intentionally excluded.
-
----
 
 ### WinApps
 
@@ -347,9 +317,7 @@ winapps/
 └── winapps.conf
 ```
 
-Contains the WinApps configuration.
-
----
+Contains the [WinApps](https://github.com/winapps-org/winapps) configuration.
 
 ### Zed
 
@@ -358,9 +326,7 @@ zed/
 └── settings.json
 ```
 
-Contains the Zed editor settings.
-
----
+Contains the [Zed](https://zed.dev/) editor settings.
 
 ## What's Not Included
 
@@ -383,8 +349,6 @@ Notably:
 * Other generated/log/temporary files
 
 The goal is to keep this repository focused on the configurations that are actually useful to reproduce the setup.
-
----
 
 ## Manual Dotfiles Workflow
 
@@ -436,8 +400,6 @@ dot-push
 GitHub
 ```
 
----
-
 ## Dotfiles Git Commands
 
 The dotfiles repository has several Zsh aliases defined in `shell.nix`.
@@ -454,8 +416,6 @@ Equivalent to:
 cd ~/.dotfiles
 ```
 
----
-
 ### Check repository status
 
 ```bash
@@ -469,8 +429,6 @@ git -C ~/.dotfiles status
 ```
 
 Shows modified, deleted, untracked, and staged files.
-
----
 
 ### View unstaged changes
 
@@ -486,8 +444,6 @@ git -C ~/.dotfiles diff
 
 Shows changes that have not yet been staged.
 
----
-
 ### Stage everything
 
 ```bash
@@ -501,8 +457,6 @@ git -C ~/.dotfiles add -A
 ```
 
 Stages all additions, modifications, and deletions.
-
----
 
 ### View commit history
 
@@ -518,8 +472,6 @@ git -C ~/.dotfiles log --oneline --decorate --graph
 
 Displays the repository history in a compact graphical format.
 
----
-
 ### View the Git remote
 
 ```bash
@@ -534,8 +486,6 @@ git -C ~/.dotfiles remote -v
 
 Shows the configured GitHub remote.
 
----
-
 ### Push to GitHub
 
 ```bash
@@ -549,8 +499,6 @@ git -C ~/.dotfiles push
 ```
 
 This is deliberately separate from `dotfrost`.
-
----
 
 ## `dotfrost`
 
@@ -604,8 +552,6 @@ dot-push
 
 This separation makes it possible to review and commit changes without immediately publishing them.
 
----
-
 ## Fresh Machine Setup
 
 ### 1. Clone the repository
@@ -613,8 +559,6 @@ This separation makes it possible to review and commit changes without immediate
 ```bash
 git clone https://github.com/bwoah-md/dotfiles.git ~/.dotfiles
 ```
-
----
 
 ### 2. Copy configurations into `~/.config`
 
@@ -632,8 +576,6 @@ For applications where only individual files are required, copy those files into
 
 Do **not** create symlinks unless you intentionally want to change the workflow described by this repository.
 
----
-
 ### 3. Restore `.zshrc`
 
 The repository also contains:
@@ -650,8 +592,6 @@ cp ~/.dotfiles/.zshrc ~/.zshrc
 
 The Zsh configuration contains the dotfiles aliases and `dotfrost` workflow.
 
----
-
 ### 4. Configure Noctalia
 
 If you use Noctalia Shell, install and configure it from:
@@ -664,8 +604,6 @@ After installing Noctalia, configure its custom themes as appropriate for the ap
 
 If you do not use Noctalia, expect to manually adjust theme references and colors in several application configurations.
 
----
-
 ## Zsh Configuration
 
 The broader Zsh/NixOS shell setup is maintained in the main NixOS repository:
@@ -675,8 +613,6 @@ The broader Zsh/NixOS shell setup is maintained in the main NixOS repository:
 That file contains the declarative Zsh configuration, general aliases, NixOS aliases, shell initialization, completion configuration, keybindings, and other shell functionality.
 
 This repository only tracks the `.zshrc` side of the dotfiles setup.
-
----
 
 ## Relationship With NixOS Configuration
 
@@ -729,8 +665,6 @@ https://github.com/bwoah-md/dotfiles
 
 The two repositories are intentionally separate.
 
----
-
 ## Useful Commands
 
 ```bash
@@ -758,8 +692,6 @@ dotfrost
 # Push local commits to GitHub
 dot-push
 ```
-
----
 
 ## Philosophy
 
