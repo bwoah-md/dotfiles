@@ -4,12 +4,12 @@
 "Mod+Return" = "spawn:foot"
 "Mod+Ctrl+E" = "spawn:foot --class=yazi.filemanager -e yazi"
 "Mod+B" = "spawn:zen-twilight"
-"Mod+E" = "spawn:nautilus --new-window"
+"Mod+E" = "spawn:pcmanfm-qt --new-window"
 
 # ── Panels ──
-"Mod+Space" = "spawn:noctalia msg panel-toggle launcher"
+"Mod" = "spawn:noctalia msg panel-toggle launcher"
 "Mod+Tab" = "spawn:noctalia msg window-switcher"
-"Mod+Alt+Space" = "spawn:noctalia msg panel-toggle control-center"
+"Mod+Space" = "spawn:noctalia msg panel-toggle control-center"
 "Mod+N" = "spawn:noctalia msg panel-toggle control-center notifications"
 "Mod+A" = "spawn:noctalia msg panel-toggle control-center audio"
 "Mod+Ctrl+V" = "spawn:noctalia msg panel-toggle clipboard"
