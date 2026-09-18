@@ -12,37 +12,36 @@ opacity = 0.9
 [[window_rule]]
 match.app_id = "^dev.noctalia.Noctalia$"
 default_floating = true
-default_size = [1020, 900]
-# blur_popups = false   # uncomment to leave popups unblurred
+default_floating_size = { width = 0.5, height = 0.7 }
 
 [[window_rule]]
 match.app_id = "^dev.noctalia.UmbrielSharePicker$"
 default_floating = true
-default_size = [800, 600]
+default_floating_size = { width = 0.4, height = 0.5 }
 default_position = { x = 32, y = 32, anchor = "center" }
 
 [[window_rule]]
 match.app_id = "^xdg-desktop-portal-gtk$"
 default_floating = true
-default_size = [800, 600]
+default_floating_size = { width = 0.4, height = 0.5 }
 default_position = { x = 0, y = 0, anchor = "center" }
 
-# ─── Picture-in-Picture (for Browsers) ───
+# ─── Picture-in-Picture ───
 [[window_rule]]
 match.title = "^(Picture-in-Picture|Picture in picture)$"
 default_floating = true
-default_size = [480, 270]
+default_floating_size = { width = 0.25, height = 0.25 }
 default_output = "HDMI-A-1"
 opacity = 1.0
 default_position = { x = 10, y = 10, anchor = "bottom_right" }
 default_focused = false
 default_pinned = true
 
-# ─── Yazi (via ghostty --class) ───
+# ─── Yazi ───
 [[window_rule]]
 match.app_id = "^yazi\\.filemanager$"
 default_floating = true
-default_size = [1100, 700]
+default_floating_size = { width = 0.55, height = 0.55 }
 default_position = { x = 0, y = 0, anchor = "center" }
 
 # ─── General Floating ───
@@ -54,23 +53,23 @@ default_floating = true
 [[window_rule]]
 match.app_id = "^org.localsend.localsend_app$"
 default_floating = true
-default_size = [800, 600]
+default_floating_size = { width = 0.4, height = 0.5 }
 
 [[window_rule]]
 match.app_id = "^com\\.obsproject\\.Studio$"
 default_floating = true
-default_size = [1100, 800]
+default_floating_size = { width = 0.55, height = 0.65 }
 
 [[window_rule]]
 match.app_id = "^scrcpy$"
 opacity = 1.0
 default_floating = true
-default_size = [468, 1039]
+default_floating_size = { width = 0.3, height = 0.9 }
 
 [[window_rule]]
 match.app_id = "^nwg-look$"
 default_floating = true
-default_size = [761, 459]
+default_floating_size = { width = 0.4, height = 0.4 }
 
 [[window_rule]]
 match.app_id = "^wlfreerdp$"

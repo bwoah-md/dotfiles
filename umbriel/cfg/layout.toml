@@ -2,7 +2,7 @@
 [layout]
 mode = "scrolling"
 gap = 6
-width_presets = [0.333, 0.5, 0.667]
+extent_presets = [0.333, 0.5, 0.667]
 
 [layout.struts]
 left = 0
@@ -11,7 +11,7 @@ top = 0
 bottom = 0
 
 [layout.scrolling]
-default_width_fraction = 0.5
+default_extent_fraction = 0.5
 center_underfull_strip = true
 center_focused = "never"
 

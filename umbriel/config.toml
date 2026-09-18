@@ -13,5 +13,7 @@ files = [
   "cfg/workspaces.toml",
   "cfg/rules.toml",
   "cfg/events.toml",
-  "noctalia.toml",
-]
+  ]
+
+[include.optional]
+files = ["noctalia.toml"]

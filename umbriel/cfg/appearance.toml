@@ -16,20 +16,20 @@ drag_opacity = 0.75
 
 [colors]
 backdrop = "#00000000"
-shadow = "#0000007F"
+shadow = "#000000FF"
 
 [appearance.blur]
 enabled = true
 optimized = false
 passes = 3
-radius = 3
-noise = 0.0
-saturation = 1.5
+radius = 2
+noise = 0
+saturation = 1.0
 brightness = 0.9
-contrast = 0.9
+contrast = 1
 
 [appearance.shadow]
 enabled = true
-softness = 70
-offset_x = 5
-offset_y = 5
+softness = 100
+offset_x = 0
+offset_y = 0

@@ -21,7 +21,6 @@ The live configurations remain in their normal locations under `~/.config`. This
 ├── qutebrowser/
 ├── umbriel/
 ├── winapps/
-└── zed/
 ````
 
 ## Theme & Noctalia Shell
@@ -42,7 +41,6 @@ If you **do not** use Noctalia, you will need to manually configure the themes f
 * Kitty
 * Qutebrowser
 * Umbriel
-* Zed
 
 The Noctalia configuration itself is intentionally **not** included in this repository.
 
@@ -65,7 +63,6 @@ The main projects and resources used by this setup:
 | Qutebrowser    | [qutebrowser.org](https://qutebrowser.org)                                               |
 | Umbriel        | [github.com/noctalia-dev/umbriel](https://github.com/noctalia-dev/umbriel)               |
 | WinApps        | [github.com/winapps-org/winapps](https://github.com/winapps-org/winapps)                 |
-| Zed            | [zed.dev](https://zed.dev/)                                                              |
 
 ## MPV
 
@@ -90,7 +87,6 @@ Not included:
 * Helix themes
 * Foot themes
 * Fastfetch themes
-* Zed themes
 * Concord logs
 * Other temporary/generated files
 
