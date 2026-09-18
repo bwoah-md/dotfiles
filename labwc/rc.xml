@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<!-- labwc configuration for icy@nix -->
+<labwc_config>
+  <core><gap>10</gap><decoration>server</decoration></core>
+
+  <!-- Window Switcher -->
+  <windowSwitcher preview="no" outlines="yes"><osd style="thumbnail"/></windowSwitcher>
+
+  <theme>
+    <name>noctalia</name>
+    <cornerRadius>0</cornerRadius>
+    <keepBorder>yes</keepBorder>
+    <icon>Noctalia-Colloid</icon>
+    <dropShadows>yes</dropShadows>
+    <dropShadowsOnTiled>yes</dropShadowsOnTiled>
+  </theme>
+
+  <mouse>
+    <default/>
+    <context name="Root">
+      <mousebind direction="W-Up" action="Scroll"><action name="GoToDesktop" to="left"/></mousebind>
+      <mousebind direction="W-Down" action="Scroll"><action name="GoToDesktop" to="right"/></mousebind>
+      <mousebind direction="W-C-Up" action="Scroll"><action name="SendToDesktop" to="left" wrap="no"/></mousebind>
+      <mousebind direction="W-C-Down" action="Scroll"><action name="SendToDesktop" to="right" wrap="no"/></mousebind>
+    </context>
+
+    <context name="Frame">
+      <mousebind direction="W-Up" action="Scroll"><action name="GoToDesktop" to="left"/></mousebind>
+      <mousebind direction="W-Down" action="Scroll"><action name="GoToDesktop" to="right"/></mousebind>
+      <mousebind direction="W-C-Up" action="Scroll"><action name="SendToDesktop" to="left" wrap="no"/></mousebind>
+      <mousebind direction="W-C-Down" action="Scroll"><action name="SendToDesktop" to="right" wrap="no"/></mousebind>
+    </context>
+  </mouse>
+
+  <keyboard>
+    <default/>
+    <numlock>on</numlock>
+    <repeatRate>50</repeatRate>
+    <repeatDelay>300</repeatDelay>
+
+    <!-- Base Binds -->
+    <keybind key="W-Return"><action name="Execute" command="kitty"/></keybind>
+    <keybind key="W-C-e"><action name="Execute" command="kitty yazi"/></keybind>
+    <keybind key="W-b"><action name="Execute" command="zen-twilight"/></keybind>
+    <keybind key="W-e"><action name="Execute" command="pcmanfm-qt --new-window"/></keybind>
+
+    <!-- Noctalia Launcher -->
+    <keybind key="W-A-space"><action name="Execute" command="noctalia msg panel-toggle launcher"/></keybind>
+
+    <!-- Noctalia IPC binds -->
+    <keybind key="W-space"><action name="Execute" command="noctalia msg panel-toggle control-center"/></keybind>
+    <keybind key="W-n"><action name="Execute" command="noctalia msg panel-toggle control-center notifications"/></keybind>
+    <keybind key="W-a"><action name="Execute" command="noctalia msg panel-toggle control-center audio"/></keybind>
+    <keybind key="W-C-v"><action name="Execute" command="noctalia msg panel-toggle clipboard"/></keybind>
+    <keybind key="W-C-n"><action name="Execute" command="noctalia msg panel-toggle noctalia/notes:panel"/></keybind>
+    <keybind key="W-S-n"><action name="Execute" command="noctalia msg panel-toggle nightwatch75/todo:panel"/></keybind>
+    <keybind key="W-y"><action name="Execute" command="noctalia msg panel-toggle aabidk20/yt-music:panel"/></keybind>
+    <keybind key="W-S-c"><action name="Execute" command="noctalia msg plugin oldirtty/color_picker:service all pick -alq"/></keybind>
+    <keybind key="W-C-S-c"><action name="Execute" command="noctalia msg panel-toggle oldirtty/color_picker:panel -alq"/></keybind>
+    <keybind key="C-S-Escape"><action name="Execute" command="noctalia msg panel-toggle session"/></keybind>
+    <keybind key="W-Semicolon"><action name="Execute" command="noctalia msg panel-toggle launcher &quot;;e &quot;"/></keybind>
+
+    <!-- Screenshots & Recording -->
+    <keybind key="C-S-1"><action name="Execute" command="noctalia msg screenshot-region"/></keybind>
+    <keybind key="C-S-2"><action name="Execute" command="noctalia msg screenshot-fullscreen"/></keybind>
+    <keybind key="C-S-3"><action name="Execute" command="noctalia msg screenshot-fullscreen pick"/></keybind>
+    <keybind key="C-S-4"><action name="Execute" command="noctalia msg screenshot-fullscreen all"/></keybind>
+    <keybind key="W-S-r"><action name="Execute" command="noctalia msg plugin noctalia/screen_recorder:service all toggle"/></keybind>
+
+    <!-- Noctalia IPC Calls -->
+    <keybind key="XF86AudioRaiseVolume"><action name="Execute" command="qs -c noctalia-shell ipc call volume increase"/></keybind>
+    <keybind key="XF86AudioLowerVolume"><action name="Execute" command="qs -c noctalia-shell ipc call volume decrease"/></keybind>
+    <keybind key="XF86AudioMute"><action name="Execute" command="qs -c noctalia-shell ipc call volume muteOutput"/></keybind>
+    <keybind key="XF86AudioMicMute"><action name="Execute" command="qs -c noctalia-shell ipc call volume muteInput"/></keybind>
+    <keybind key="XF86AudioNext"><action name="Execute" command="qs -c noctalia-shell ipc call media next"/></keybind>
+    <keybind key="XF86AudioPrev"><action name="Execute" command="qs -c noctalia-shell ipc call media previous"/></keybind>
+    <keybind key="XF86AudioPlay"><action name="Execute" command="qs -c noctalia-shell ipc call media playPause"/></keybind>
+    <keybind key="XF86AudioPause"><action name="Execute" command="qs -c noctalia-shell ipc call media playPause"/></keybind>
+    <keybind key="XF86MonBrightnessUp"><action name="Execute" command="qs -c noctalia-shell ipc call brightness increase"/></keybind>
+    <keybind key="XF86MonBrightnessDown"><action name="Execute" command="qs -c noctalia-shell ipc call brightness decrease"/></keybind>
+
+    <!-- Window Switching -->
+    <keybind key="A-Tab"><action name="NextWindow"/></keybind>
+    <keybind key="A-S-Tab"><action name="PreviousWindow"/></keybind>
+    <keybind key="W-Tab"><action name="NextWindow" workspace="all"/></keybind>
+    <keybind key="W-S-Tab"><action name="PreviousWindow" workspace="all"/></keybind>
+    <keybind key="W-bracketright"><action name="NextWindow"/></keybind>
+    <keybind key="W-bracketleft"><action name="PreviousWindow"/></keybind>
+    <keybind key="W-q"><action name="Close"/></keybind>
+    <keybind key="W-m"><action name="Iconify"/></keybind>
+    <keybind key="W-c"><action name="AutoPlace" policy="center"/></keybind>
+
+    <!-- Reconfigure labwc:wlroots -->
+    <keybind key="W-C-S-r"><action name="Reconfigure"/></keybind>
+
+    <!-- Fullscreen -->
+    <keybind key="W-f"><action name="ToggleMaximize"/></keybind>
+    <keybind key="W-C-f"><action name="ToggleFullscreen"/></keybind>
+
+    <!-- Resizing -->
+    <keybind key="W-A-k"><action name="ResizeRelative" bottom="-10"/></keybind>
+    <keybind key="W-S-k"><action name="ResizeRelative" bottom="10"/></keybind>
+    <keybind key="W-A-j"><action name="ResizeRelative" top="-10"/></keybind>
+    <keybind key="W-S-j"><action name="ResizeRelative" top="10"/></keybind>
+    <keybind key="W-A-h"><action name="ResizeRelative" left="-10"/></keybind>
+    <keybind key="W-S-h"><action name="ResizeRelative" left="10"/></keybind>
+    <keybind key="W-A-l"><action name="ResizeRelative" right="-10"/></keybind>
+    <keybind key="W-S-l"><action name="ResizeRelative" right="10"/></keybind>
+
+    <!-- Workspaces -->
+    <keybind key="W-k"><action name="GoToDesktop" to="left"/></keybind>
+    <keybind key="W-j"><action name="GoToDesktop" to="right"/></keybind>
+    <keybind key="W-Page_Up"><action name="GoToDesktop" to="left"/></keybind>
+    <keybind key="W-Page_Down"><action name="GoToDesktop" to="right"/></keybind>
+    <keybind key="W-C-k"><action name="SendToDesktop" to="left" wrap="no"/></keybind>
+    <keybind key="W-C-j"><action name="SendToDesktop" to="right" wrap="no"/></keybind>
+    <keybind key="W-1"><action name="GoToDesktop" to="1"/></keybind>
+    <keybind key="W-2"><action name="GoToDesktop" to="2"/></keybind>
+    <keybind key="W-3"><action name="GoToDesktop" to="3"/></keybind>
+    <keybind key="W-4"><action name="GoToDesktop" to="4"/></keybind>
+    <keybind key="W-5"><action name="GoToDesktop" to="5"/></keybind>
+    <keybind key="W-6"><action name="GoToDesktop" to="6"/></keybind>
+    <keybind key="W-7"><action name="GoToDesktop" to="7"/></keybind>
+    <keybind key="W-8"><action name="GoToDesktop" to="8"/></keybind>
+    <keybind key="W-9"><action name="GoToDesktop" to="9"/></keybind>
+    <keybind key="W-C-1"><action name="SendToDesktop" to="1"/></keybind>
+    <keybind key="W-C-2"><action name="SendToDesktop" to="2"/></keybind>
+    <keybind key="W-C-3"><action name="SendToDesktop" to="3"/></keybind>
+    <keybind key="W-C-4"><action name="SendToDesktop" to="4"/></keybind>
+    <keybind key="W-C-5"><action name="SendToDesktop" to="5"/></keybind>
+    <keybind key="W-C-6"><action name="SendToDesktop" to="6"/></keybind>
+    <keybind key="W-C-7"><action name="SendToDesktop" to="7"/></keybind>
+    <keybind key="W-C-8"><action name="SendToDesktop" to="8"/></keybind>
+    <keybind key="W-C-9"><action name="SendToDesktop" to="9"/></keybind>
+
+    <!-- VM Passthorugh Toggle -->
+    <keybind key="W-F11" overrideInhibition="yes"><action name="ToggleKeybinds"/></keybind>
+
+    <!-- Outputs -->
+    <keybind key="W-S-p"><action name="Execute" command="wlopm --toggle eDP-1"/></keybind>
+  </keyboard>
+
+  <mouse><default/></mouse>
+
+  <libinput>
+    <device category="default">
+      <naturalScroll>no</naturalScroll>
+      <accelProfile>flat</accelProfile>
+      <pointerSpeed>1</pointerSpeed>
+      <sendEventsMode>disabledOnExternalMouse</sendEventsMode>
+    </device>
+    <device category="touchpad">
+      <tap>yes</tap>
+      <naturalScroll>yes</naturalScroll>
+      <clickMethod>clickFinger</clickMethod>
+      <pointerSpeed>1</pointerSpeed>
+      <disableWhileTyping>yes</disableWhileTyping>
+      <middleEmulation>yes</middleEmulation>
+    </device>
+  </libinput>
+
+  <desktops number="9"/>
+
+  <windowRules>
+    <!-- Server Side Decorations -->
+  </windowRules>
+
+  <focus>
+    <followMouse>yes</followMouse>
+    <followMouseRequiresMovement>yes</followMouseRequiresMovement>
+    <raiseOnFocus>no</raiseOnFocus>
+  </focus>
+</labwc_config>

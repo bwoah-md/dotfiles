@@ -1,0 +1,20 @@
+# Wayland
+XDG_SESSION_TYPE=wayland
+GDK_BACKEND=wayland,x11
+
+# Cursor
+XCURSOR_THEME=Bibata-Modern-Ice
+XCURSOR_SIZE=24
+
+# QT_QPA_PLATFORM=wayland;xcb
+# QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+
+# AMD-specific — not applicable
+# SDL_VIDEODRIVER=wayland
+# VDPAU_DRIVER=radeonsi
+# LIBVA_DRIVER_NAME=radeonsi
+
+# Keyboard — leave disabled unless needed
+# XKB_DEFAULT_LAYOUT=latam,us
+# XKB_DEFAULT_VARIANT=,altgr-intl
+# XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle

@@ -1,0 +1,32 @@
+#!/bin/bash
+# ~/.config/labwc/autostart
+
+# systemd graphical session integration
+systemctl --user --no-block start labwc-session.target
+
+# Outputs
+wlr-randr --output HDMI-A-1 --mode 1920x1080@100Hz --pos 0,0 --scale 1
+wlr-randr --output eDP-1 --mode 1920x1080@120.030Hz --pos 1920,0 --scale 1.1
+
+# Power off laptop display by default
+wlopm --off eDP-1
+
+# GTK
+gnome_schema="org.gnome.desktop.interface"
+
+gsettings set "$gnome_schema" gtk-theme "adw-gtk3-dark"
+gsettings set "$gnome_schema" cursor-theme "Bibata-Modern-Ice"
+gsettings set "$gnome_schema" font-name "Terminess Nerd Font"
+gsettings set "$gnome_schema" icon-theme "Noctalia-Colloid"
+
+# Apply the current Noctalia theme to LabWC
+bash ~/.config/labwc/template/apply.sh
+
+# Clipboard
+wl-clip-persist --clipboard regular --reconnect-tries 0 2>/dev/null &
+wl-paste --type text --watch cliphist store &
+
+# Noctalia + KDE Connect
+killall -q noctalia
+noctalia &
+kdeconnect-indicator &
