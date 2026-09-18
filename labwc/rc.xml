@@ -108,12 +108,12 @@
     <keybind key="W-S-l"><action name="ResizeRelative" right="10"/></keybind>
 
     <!-- Workspaces -->
-    <keybind key="W-j"><action name="GoToDesktop" to="left"/></keybind>
-    <keybind key="W-k"><action name="GoToDesktop" to="right"/></keybind>
+    <keybind key="W-k"><action name="GoToDesktop" to="left"/></keybind>
+    <keybind key="W-j"><action name="GoToDesktop" to="right"/></keybind>
     <keybind key="W-Page_Up"><action name="GoToDesktop" to="left"/></keybind>
     <keybind key="W-Page_Down"><action name="GoToDesktop" to="right"/></keybind>
-    <keybind key="W-C-j"><action name="SendToDesktop" to="left" wrap="no"/></keybind>
-    <keybind key="W-C-k"><action name="SendToDesktop" to="right" wrap="no"/></keybind>
+    <keybind key="W-C-k"><action name="SendToDesktop" to="left" wrap="no"/></keybind>
+    <keybind key="W-C-j"><action name="SendToDesktop" to="right" wrap="no"/></keybind>
     <keybind key="W-1"><action name="GoToDesktop" to="1"/></keybind>
     <keybind key="W-2"><action name="GoToDesktop" to="2"/></keybind>
     <keybind key="W-3"><action name="GoToDesktop" to="3"/></keybind>
