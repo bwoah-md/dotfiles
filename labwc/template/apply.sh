@@ -33,6 +33,8 @@ if [ -f "$source_theme" ]; then
     C_MAX=$(get_color "_meta.btn.max" "#27C93F")
     C_INACT=$(get_color "_meta.btn.inactive" "#4D4D4D")
 
+    C_PRIMARY=$(get_color "window.active.border.color" "#7AA2F7")
+
     # Insert snapping overlay colors
     echo "snapping.overlay.region.bg.color: ${C_MAX} 40" >> "$theme_file"
     echo "snapping.overlay.edge.bg.color: ${C_MAX} 40" >> "$theme_file"
@@ -51,6 +53,34 @@ if [ -f "$source_theme" ]; then
 </svg>
 EOF
     }
+
+    create_primary_icon() {
+        local source="$1"
+        local target="$2"
+
+        sed \
+            -e "s/stroke=\"currentColor\"/stroke=\"$C_PRIMARY\"/g" \
+            -e "s/fill=\"currentColor\"/fill=\"$C_PRIMARY\"/g" \
+            -e "s/fill=\"black\"/fill=\"$C_PRIMARY\"/g" \
+            "$config_dir/icons/$source" > "$theme_dir/$target"
+    }
+
+    # Menu icons (Primary)
+    create_primary_icon "terminal.svg" "terminal.svg"
+    create_primary_icon "explorer.svg" "explorer.svg"
+    create_primary_icon "zed.svg" "zed.svg"
+    create_primary_icon "reload-1.svg" "reload-1.svg"
+    create_primary_icon "reload-2.svg" "reload-2.svg"
+    create_primary_icon "wallpaper.svg" "wallpaper.svg"
+    create_primary_icon "settings.svg" "settings.svg"
+    create_primary_icon "logout.svg" "logout.svg"
+
+    # Client menu icons (Primary)
+    create_primary_icon "minimize.svg" "minimize.svg"
+    create_primary_icon "maximize.svg" "maximize.svg"
+    create_primary_icon "fullscreen.svg" "fullscreen.svg"
+    create_primary_icon "alwaysontop.svg" "alwaysontop.svg"
+    create_primary_icon "close.svg" "close.svg"
 
     # Close (Error)
     create_square_svg "close-active.svg" "$C_CLOSE"

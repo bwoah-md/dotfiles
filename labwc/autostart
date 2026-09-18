@@ -29,4 +29,4 @@ wl-paste --type text --watch cliphist store &
 # Noctalia + KDE Connect
 killall -q noctalia
 noctalia &
-kdeconnect-indicator &
+kdeconnectd &

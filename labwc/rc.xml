@@ -13,6 +13,9 @@
     <icon>Noctalia-Colloid</icon>
     <dropShadows>yes</dropShadows>
     <dropShadowsOnTiled>yes</dropShadowsOnTiled>
+
+    <font place="MenuHeader" name="monospace" size="11" slant="italic" weight="medium"/>
+    <font place="MenuItem" name="monospace" size="11" weight="medium"/>
   </theme>
 
   <mouse>
@@ -89,6 +92,7 @@
     <keybind key="W-q"><action name="Close"/></keybind>
     <keybind key="W-m"><action name="Iconify"/></keybind>
     <keybind key="W-c"><action name="AutoPlace" policy="center"/></keybind>
+    <keybind key="W-p"><action name="ToggleAlwaysOnTop"/></keybind>
 
     <!-- Reconfigure labwc:wlroots -->
     <keybind key="W-C-S-r"><action name="Reconfigure"/></keybind>
@@ -159,7 +163,19 @@
     </device>
   </libinput>
 
-  <desktops number="9"/>
+  <desktops number="9">
+    <names>
+      <name>一</name>
+      <name>二</name>
+      <name>三</name>
+      <name>四</name>
+      <name>五</name>
+      <name>六</name>
+      <name>七</name>
+      <name>八</name>
+      <name>九</name>
+    </names>
+  </desktops>
 
   <windowRules>
     <!-- Server Side Decorations -->
