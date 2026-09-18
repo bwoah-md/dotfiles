@@ -17,6 +17,7 @@ The live configurations remain in their normal locations under `~/.config`. This
 ├── ghostty/
 ├── helix/
 ├── kitty/
+├── labwc/
 ├── mpv/
 ├── qutebrowser/
 ├── umbriel/
@@ -39,6 +40,7 @@ If you **do not** use Noctalia, you will need to manually configure the themes f
 * Ghostty
 * Helix
 * Kitty
+* Labwc
 * Qutebrowser
 * Umbriel
 
@@ -59,6 +61,7 @@ The main projects and resources used by this setup:
 | Ghostty        | [ghostty.org](https://ghostty.org/)                                                      |
 | Helix          | [helix-editor.com](https://helix-editor.com/)                                            |
 | Kitty          | [github.com/kovidgoyal/kitty](https://github.com/kovidgoyal/kitty)                       |
+| Labwc          | [labwc.github.io](https://labwc.github.io/)
 | MPV            | [mpv.io](https://mpv.io/)                                                                |
 | Qutebrowser    | [qutebrowser.org](https://qutebrowser.org)                                               |
 | Umbriel        | [github.com/noctalia-dev/umbriel](https://github.com/noctalia-dev/umbriel)               |
@@ -140,16 +143,17 @@ GitHub
 
 The dotfiles Git aliases are defined in `shell.nix`.
 
-| Command      | Purpose                           |
-| ------------ | --------------------------------- |
-| `dot`        | Enter `~/.dotfiles`               |
-| `dot-status` | Show repository status            |
-| `dot-diff`   | Show unstaged changes             |
-| `dot-add`    | Stage all changes                 |
-| `dot-log`    | Show Git history                  |
-| `dot-remote` | Show Git remote                   |
-| `dotfrost`   | Stage, review, and locally commit |
-| `dot-push`   | Push local commits to GitHub      |
+| Command      | Purpose                               |
+| ------------ | ------------------------------------- |
+| `dot`        | Enter `~/.dotfiles`                   |
+| `dotstatus`  | Show repository status                |
+| `dotdiff`    | Show unstaged changes                 |
+| `dotadd`     | Stage all changes                     |
+| `dotlog`     | Show Git history                      |
+| `dotremote`  | Show Git remote                       |
+| `dotfrost`   | Stage, review, and locally commit     |
+| `dotpush`    | Push local commits to GitHub          |
+| `dotrestore` | Copy to `~/.config` from `~/.dotfiles`|
 
 ## `dotfrost`
 
