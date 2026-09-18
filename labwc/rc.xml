@@ -14,6 +14,9 @@
     <dropShadows>yes</dropShadows>
     <dropShadowsOnTiled>yes</dropShadowsOnTiled>
 
+    <font place="ActiveWindow" name="monospace" size="11" weight="medium"/>
+    <font place="InactiveWindow" name="monospace" size="11" weight="medium"/>
+
     <font place="MenuHeader" name="monospace" size="11" slant="italic" weight="medium"/>
     <font place="MenuItem" name="monospace" size="11" weight="medium"/>
   </theme>
