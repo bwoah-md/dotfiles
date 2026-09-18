@@ -20,7 +20,7 @@ The live configurations remain in their normal locations under `~/.config`. This
 ├── mpv/
 ├── qutebrowser/
 ├── umbriel/
-├── winapps/
+└── winapps/
 ````
 
 ## Theme & Noctalia Shell
