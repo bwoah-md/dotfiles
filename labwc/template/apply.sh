@@ -67,6 +67,7 @@ EOF
 
     # Menu icons (Primary)
     create_primary_icon "terminal.svg" "terminal.svg"
+    create_primary_icon "browser.svg" "browser.svg"
     create_primary_icon "explorer.svg" "explorer.svg"
     create_primary_icon "zed.svg" "zed.svg"
     create_primary_icon "reload-1.svg" "reload-1.svg"

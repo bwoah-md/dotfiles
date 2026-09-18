@@ -35,6 +35,10 @@
       <action name="Execute" command="kitty"/>
     </item>
 
+    <item label="Browser" icon="/home/icy/.local/share/themes/noctalia/openbox-3/browser.svg">
+      <action name="Execute" command="qutebrowser"/>
+    </item>
+
     <item label="Files" icon="/home/icy/.local/share/themes/noctalia/openbox-3/explorer.svg">
       <action name="Execute" command="pcmanfm-qt"/>
     </item>
