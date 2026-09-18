@@ -7,8 +7,8 @@ layout = ""
 track_layout = "global"
 variant = ""
 options = ""
-repeat_rate = 25
-repeat_delay = 600
+repeat_rate = 50
+repeat_delay = 300
 numlock_toggle = true
 
 [input.touchpad]
