@@ -26,7 +26,6 @@
 
     <separator label="──────── System ────────"/>
     <item label="Reload Environment" icon="/home/icy/.local/share/themes/noctalia/openbox-3/reload-2.svg"><action name="Reconfigure"/></item>
-    <item label="Sync Greeter" icon="/home/icy/.local/share/themes/noctalia/openbox-3/sync.svg"><action name="Execute" command="noctalia msg greeter-sync"/></item>
     <item label="Log Out" icon="/home/icy/.local/share/themes/noctalia/openbox-3/logout.svg"><action name="Exit"/></item>
 
   </menu>

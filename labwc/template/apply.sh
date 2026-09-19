@@ -122,7 +122,6 @@ EOF
 
     create_primary_icon "wallpaper.svg" "wallpaper.svg"
     create_primary_icon "settings.svg" "settings.svg"
-    create_primary_icon "sync.svg" "sync.svg"
     create_primary_icon "logout.svg" "logout.svg"
 
 
