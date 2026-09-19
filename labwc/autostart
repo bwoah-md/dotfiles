@@ -22,6 +22,12 @@ gsettings set "$gnome_schema" icon-theme "Noctalia-Colloid"
 # Apply the current Noctalia theme to LabWC
 bash ~/.config/labwc/template/apply.sh
 
+# ========================================================================================
+# NOTE: Remove this line before you apply this script in labwc otherwise system won't load
+# ========================================================================================
+cp -f "$HOME/.config/labwc/noctalia/config.toml" \
+      "$HOME/.config/noctalia/config.toml"
+
 # Clipboard
 wl-clip-persist --clipboard regular --reconnect-tries 0 2>/dev/null &
 wl-paste --type text --watch cliphist store &
