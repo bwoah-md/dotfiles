@@ -2,78 +2,32 @@
 <openbox_menu>
 
   <menu id="client-menu">
-    <item label="Minimize" icon="/home/icy/.local/share/themes/noctalia/openbox-3/minimize.svg">
-      <action name="Iconify"/>
-    </item>
-
-    <item label="Maximize" icon="/home/icy/.local/share/themes/noctalia/openbox-3/maximize.svg">
-      <action name="ToggleMaximize"/>
-    </item>
-
-    <item label="Fullscreen" icon="/home/icy/.local/share/themes/noctalia/openbox-3/fullscreen.svg">
-      <action name="ToggleFullscreen"/>
-    </item>
-
-    <item label="Always on Top" icon="/home/icy/.local/share/themes/noctalia/openbox-3/alwaysontop.svg">
-      <action name="ToggleAlwaysOnTop"/>
-    </item>
-
+    <item label="Minimize" icon="/home/icy/.local/share/themes/noctalia/openbox-3/minimize.svg"><action name="Iconify"/></item>
+    <item label="Maximize" icon="/home/icy/.local/share/themes/noctalia/openbox-3/maximize.svg"><action name="ToggleMaximize"/></item>
+    <item label="Fullscreen" icon="/home/icy/.local/share/themes/noctalia/openbox-3/fullscreen.svg"><action name="ToggleFullscreen"/></item>
+    <item label="Always on Top" icon="/home/icy/.local/share/themes/noctalia/openbox-3/alwaysontop.svg"><action name="ToggleAlwaysOnTop"/></item>
     <menu id="client-send-to-menu"/>
-
     <separator/>
-
-    <item label="Close" icon="/home/icy/.local/share/themes/noctalia/openbox-3/close.svg">
-      <action name="Close"/>
-    </item>
+    <item label="Close" icon="/home/icy/.local/share/themes/noctalia/openbox-3/close.svg"><action name="Close"/></item>
   </menu>
 
   <menu id="root-menu">
 
     <separator label="──────── Apps ────────"/>
-
-    <item label="Terminal" icon="/home/icy/.local/share/themes/noctalia/openbox-3/terminal.svg">
-      <action name="Execute" command="kitty"/>
-    </item>
-
-    <item label="Browser" icon="/home/icy/.local/share/themes/noctalia/openbox-3/browser.svg">
-      <action name="Execute" command="qutebrowser"/>
-    </item>
-
-    <item label="Files" icon="/home/icy/.local/share/themes/noctalia/openbox-3/explorer.svg">
-      <action name="Execute" command="pcmanfm-qt"/>
-    </item>
-
-    <item label="Code" icon="/home/icy/.local/share/themes/noctalia/openbox-3/zed.svg">
-      <action name="Execute" command="zeditor"/>
-    </item>
+    <item label="Terminal" icon="/home/icy/.local/share/themes/noctalia/openbox-3/terminal.svg"><action name="Execute" command="kitty"/></item>
+    <item label="Browser" icon="/home/icy/.local/share/themes/noctalia/openbox-3/browser.svg"><action name="Execute" command="qutebrowser"/></item>
+    <item label="Files" icon="/home/icy/.local/share/themes/noctalia/openbox-3/explorer.svg"><action name="Execute" command="pcmanfm-qt"/></item>
+    <item label="Code" icon="/home/icy/.local/share/themes/noctalia/openbox-3/zed.svg"><action name="Execute" command="zeditor"/></item>
 
     <separator label="──────── Noctalia ────────"/>
-
-    <item label="Reload Configuration" icon="/home/icy/.local/share/themes/noctalia/openbox-3/reload-1.svg">
-      <action name="Execute" command="noctalia msg config-reload"/>
-    </item>
-
-    <item label="Wallpaper Selector" icon="/home/icy/.local/share/themes/noctalia/openbox-3/wallpaper.svg">
-      <action name="Execute" command="noctalia msg panel-toggle wallpaper"/>
-    </item>
-
-    <item label="Settings" icon="/home/icy/.local/share/themes/noctalia/openbox-3/settings.svg">
-      <action name="Execute" command="noctalia msg settings-toggle"/>
-    </item>
+    <item label="Reload Configuration" icon="/home/icy/.local/share/themes/noctalia/openbox-3/reload-1.svg"><action name="Execute" command="noctalia msg config-reload"/></item>
+    <item label="Wallpaper Selector" icon="/home/icy/.local/share/themes/noctalia/openbox-3/wallpaper.svg"><action name="Execute" command="noctalia msg panel-toggle wallpaper"/></item>
+    <item label="Settings" icon="/home/icy/.local/share/themes/noctalia/openbox-3/settings.svg"><action name="Execute" command="noctalia msg settings-toggle"/></item>
 
     <separator label="──────── System ────────"/>
-
-    <item label="Reload Environment" icon="/home/icy/.local/share/themes/noctalia/openbox-3/reload-2.svg">
-      <action name="Reconfigure"/>
-    </item>
-
-    <item label="Sync Greeter" icon="/home/icy/.local/share/themes/noctalia/openbox-3/sync.svg">
-      <action name="Execute" command="noctalia msg greeter-sync"/>
-    </item>
-
-    <item label="Log Out" icon="/home/icy/.local/share/themes/noctalia/openbox-3/logout.svg">
-      <action name="Exit"/>
-    </item>
+    <item label="Reload Environment" icon="/home/icy/.local/share/themes/noctalia/openbox-3/reload-2.svg"><action name="Reconfigure"/></item>
+    <item label="Sync Greeter" icon="/home/icy/.local/share/themes/noctalia/openbox-3/sync.svg"><action name="Execute" command="noctalia msg greeter-sync"/></item>
+    <item label="Log Out" icon="/home/icy/.local/share/themes/noctalia/openbox-3/logout.svg"><action name="Exit"/></item>
 
   </menu>
 
