@@ -1,0 +1,13 @@
+# 1. BenQ Monitor (Left / Primary)
+[output.HDMI-A-1]
+mode = "1920x1080@100"
+position = [0, 0]
+scale = 1.0
+
+# 2. Laptop Monitor (Right)
+[output.eDP-1]
+mode = "1920x1080@120.030"
+position = [1920, 0]
+scale = 1.1
+# vrr = "always"
+enabled = false

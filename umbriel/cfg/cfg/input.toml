@@ -1,0 +1,35 @@
+[input]
+middle_click_paste = true
+window_drag_toggle = "none"
+
+[input.keyboard]
+layout = ""
+track_layout = "global"
+variant = ""
+options = ""
+repeat_rate = 50
+repeat_delay = 300
+numlock_toggle = true
+
+[input.touchpad]
+tap = true
+natural_scroll = true
+
+[input.mouse]
+# accel_profile = "flat"
+sensitivity = 0.5
+scroll_wheel_step = 60
+
+[input.tablet]
+enabled = true
+
+[input.cursor]
+theme = ""
+size = 23
+follows_focus = true
+hardware_cursor = true
+hide_when_typing = false
+hide_timeout_ms = 0
+
+[input.focus]
+follows_mouse = true
