@@ -61,8 +61,6 @@
     <keybind key="W-C-n"><action name="Execute" command="noctalia msg panel-toggle noctalia/notes:panel"/></keybind>
     <keybind key="W-S-n"><action name="Execute" command="noctalia msg panel-toggle nightwatch75/todo:panel"/></keybind>
     <keybind key="W-y"><action name="Execute" command="noctalia msg panel-toggle aabidk20/yt-music:panel"/></keybind>
-    <keybind key="W-S-c"><action name="Execute" command="noctalia msg plugin oldirtty/color_picker:service all pick -alq"/></keybind>
-    <keybind key="W-C-S-c"><action name="Execute" command="noctalia msg panel-toggle oldirtty/color_picker:panel -alq"/></keybind>
     <keybind key="C-S-Escape"><action name="Execute" command="noctalia msg panel-toggle session"/></keybind>
     <keybind key="W-Semicolon"><action name="Execute" command="noctalia msg panel-toggle launcher &quot;;e &quot;"/></keybind>
 
