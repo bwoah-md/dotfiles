@@ -8,7 +8,14 @@
     <item label="Always on Top" icon="/home/icy/.local/share/themes/noctalia/openbox-3/alwaysontop.svg"><action name="ToggleAlwaysOnTop"/></item>
     <menu id="client-send-to-menu"/>
     <separator/>
-    <item label="Close" icon="/home/icy/.local/share/themes/noctalia/openbox-3/close.svg"><action name="Close"/></item>
+    <item label="Close" icon="/home/icy/.local/share/themes/noctalia/openbox-3/close.svg">
+      <action name="If">
+        <prompt message="Close this window?"/>
+        <then>
+          <action name="Close"/>
+        </then>
+      </action>
+    </item>
   </menu>
 
   <menu id="root-menu">
@@ -26,8 +33,14 @@
 
     <separator label="──────── System ────────"/>
     <item label="Reload Environment" icon="/home/icy/.local/share/themes/noctalia/openbox-3/reload-2.svg"><action name="Reconfigure"/></item>
-    <item label="Log Out" icon="/home/icy/.local/share/themes/noctalia/openbox-3/logout.svg"><action name="Exit"/></item>
-
+    <item label="Log Out" icon="/home/icy/.local/share/themes/noctalia/openbox-3/logout.svg">
+      <action name="If">
+        <prompt message="Log out?"/>
+        <then>
+          <action name="Exit"/>
+        </then>
+      </action>
+    </item>
   </menu>
 
 </openbox_menu>

@@ -1,7 +1,11 @@
 <?xml version="1.0"?>
 <!-- labwc configuration for icy@nix -->
 <labwc_config>
-  <core><gap>10</gap><decoration>server</decoration></core>
+    <core>
+      <gap>10</gap>
+      <decoration>server</decoration>
+      <promptCommand>"$HOME/.config/labwc/template/labnag.sh" '%m' '%n' '%y'</promptCommand>
+    </core>
 
   <!-- Window Switcher -->
   <windowSwitcher preview="no" outlines="yes"><osd style="thumbnail"/></windowSwitcher>
@@ -51,7 +55,7 @@
     <keybind key="W-e"><action name="Execute" command="pcmanfm-qt --new-window"/></keybind>
 
     <!-- Noctalia Launcher -->
-    <keybind key="W-A-space"><action name="Execute" command="noctalia msg panel-toggle launcher"/></keybind>
+    <keybind key="Super_L" onRelease="yes"><action name="Execute" command="noctalia msg panel-toggle launcher"/></keybind>
 
     <!-- Noctalia IPC binds -->
     <keybind key="W-space"><action name="Execute" command="noctalia msg panel-toggle control-center"/></keybind>
@@ -99,7 +103,8 @@
     <keybind key="W-C-S-r"><action name="Reconfigure"/></keybind>
 
     <!-- Fullscreen -->
-    <keybind key="W-f"><action name="ToggleMaximize"/></keybind>
+    <keybind key="W-f"><action name="ToggleSnapToEdge" direction="center"/></keybind>
+    <keybind key="W-S-f"><action name="ToggleMaximize"/></keybind>
     <keybind key="W-C-f"><action name="ToggleFullscreen"/></keybind>
 
     <!-- Resizing -->
