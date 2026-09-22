@@ -190,6 +190,7 @@
     <windowRule identifier="dev.noctalia.Noctalia"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
     <windowRule identifier="Mullvad Browser"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
     <windowRule identifier="Tor Browser"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
+    <windowRule identifier="org.qutebrowser.qutebrowser"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
   </windowRules>
 
   <focus>
