@@ -183,8 +183,13 @@
     </names>
   </desktops>
 
+  <!-- Server Side Decorations -->
   <windowRules>
-    <!-- Server Side Decorations -->
+    <windowRule identifier="readest"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
+    <windowRule identifier="helium"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
+    <windowRule identifier="dev.noctalia.Noctalia"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
+    <windowRule identifier="Mullvad Browser"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
+    <windowRule identifier="Tor Browser"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
   </windowRules>
 
   <focus>
