@@ -3,7 +3,7 @@
 # ── Applications ──
 "Mod+Return" = "spawn:foot"
 "Mod+Ctrl+E" = "spawn:foot --class=yazi.filemanager -e yazi"
-"Mod+B" = "spawn:zen-twilight"
+"Mod+B" = "spawn:firefox-beta"
 "Mod+E" = "spawn:pcmanfm-qt --new-window"
 
 # ── Panels ──
@@ -145,7 +145,7 @@
 # ── Outputs ──
 "Mod+Shift+Left" = "output-focus-left"
 "Mod+Shift+Right" = "output-focus-right"
-"Mod+P" = '''spawn:bash -c "if grep -q 'enabled = true' ~/.config/umbriel/cfg/outputs.toml; then sed -i 's/enabled = true/enabled = false/' ~/.config/umbriel/cfg/outputs.toml; else sed -i 's/enabled = false/enabled = true/' ~/.config/umbriel/cfg/outputs.toml; fi"'''
+"Mod+Shift+P" = '''spawn:bash -c "if grep -q 'enabled = true' ~/.config/umbriel/cfg/outputs.toml; then sed -i 's/enabled = true/enabled = false/' ~/.config/umbriel/cfg/outputs.toml; else sed -i 's/enabled = false/enabled = true/' ~/.config/umbriel/cfg/outputs.toml; fi"'''
 
 # ── Scratchpad ──
 "Mod+Shift+Space" = "scratchpad-toggle"
@@ -155,6 +155,5 @@
 
 # ── System ──
 "Mod+W" = { action = "overview-toggle", repeat = false }
-"Mod+Shift+P" = "dpms-off"
 "Mod+F11" = { action = "submap:passthrough", repeat = false }
 "submap[passthrough],Mod+F11" = "submap:reset"
