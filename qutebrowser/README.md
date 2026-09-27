@@ -8,7 +8,7 @@
 ## Limitations
 
 1. Scripts for qutebrowser in [~/.config/noctalia/templates.toml](https://github.com/bwoah-md/dotfiles/blob/main/noctalia/templates.toml) might need to change according to your OS and how it interacts with the qutebrowser IPC calls...
-> **dir.:** `~/.local/state/noctalia/community-templates/qutebrowser/reload.sh`
+> put the file below in this **dir.:** `~/.local/state/noctalia/community-templates/qutebrowser/reload.sh`
 
 ```bash
 #!/bin/sh
