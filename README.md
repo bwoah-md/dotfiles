@@ -8,7 +8,6 @@ The live configurations remain in their normal locations under `~/.config`. This
 
 ```text
 .dotfiles/
-├── .zshrc
 ├── concord/
 ├── equibop/
 ├── fastfetch/
@@ -204,7 +203,7 @@ Use:
 dotrestore
 ```
 
-This restores the application configurations into `~/.config` and `.zshrc` into `~/.zshrc`.
+This restores the application configurations into `~/.config`.
 
 ### 3. Configure Noctalia
 
@@ -213,16 +212,6 @@ Install and configure [Noctalia Shell](https://noctalia.dev).
 Configure its custom themes as appropriate for the applications in this repository.
 
 If Noctalia is not being used, manually adjust the theme references and colors for the applications listed above.
-
-## Zsh Configuration
-
-The broader declarative Zsh configuration is maintained in the NixOS repository:
-
-[users/icy/shell.nix](https://github.com/bwoah-md/nixbtw/blob/main/users/icy/shell.nix)
-
-It contains the main Zsh configuration, aliases, shell initialization, completion, keybindings, and other shell functionality.
-
-This repository contains the `.zshrc` used alongside that configuration.
 
 ## NixOS & Dotfiles
 
@@ -246,7 +235,7 @@ Repository:
 ~/.dotfiles/
 ```
 
-Contains application configurations, themes, scripts, shaders, and `.zshrc`.
+Contains application configurations, themes, scripts and shaders.
 
 Repository:
 
