@@ -31,6 +31,7 @@ default_output = "HDMI-A-1"
 opacity = 1.0
 default_position = { x = 10, y = 10, anchor = "bottom_right" }
 default_focused = false
+focus_on_activate = false
 default_pinned = true
 
 # ─── Yazi ───
