@@ -5,7 +5,7 @@ show_images = true
 media_playback = true
 image_preview_quality = "original"
 attachment_viewer_quality = "original"
-image_protocol = "sixel" # use "kitty" for ghostty and kitty and "sixel" for foot
+image_protocol = "kitty" # use "kitty" for ghostty and kitty and "sixel" for foot
 show_custom_emoji = true
 circular_avatars = false
 

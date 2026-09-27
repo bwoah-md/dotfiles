@@ -1,8 +1,8 @@
 html, body {
   background: transparent;
   color: var(--color-fg);
-  font-family: "Terminess Nerd Font", monospace;
-  /* font-family: monospace; */
+  /* font-family: "Terminess Nerd Font", monospace; */
+  font-family: monospace;
   height: 100%;
   width: 100%;
   margin: 0;

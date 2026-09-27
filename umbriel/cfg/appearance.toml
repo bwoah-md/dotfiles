@@ -30,6 +30,6 @@ contrast = 1
 
 [appearance.shadow]
 enabled = true
-softness = 100
+softness = 30
 offset_x = 0
 offset_y = 0

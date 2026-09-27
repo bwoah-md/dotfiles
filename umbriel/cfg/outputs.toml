@@ -10,4 +10,4 @@ mode = "1920x1080@120.030"
 position = [1920, 0]
 scale = 1.1
 # vrr = "always"
-# enabled = true
+enabled = false
