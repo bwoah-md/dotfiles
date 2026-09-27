@@ -80,7 +80,7 @@ The repository intentionally excludes generated, dynamic, or unnecessary configu
 
 Not included:
 
-* Noctalia configuration
+* Noctalia configuration (because of API keys and passwords)
 * Qutebrowser `autoconfig.yml`
 * Qutebrowser Noctalia-specific configuration
 * Umbriel `noctalia.toml`
