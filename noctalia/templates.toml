@@ -1,0 +1,55 @@
+[theme.templates.user.qutebrowser]
+input_path  = "~/.config/qutebrowser/noctalia/template.py"
+output_path = "~/.config/qutebrowser/noctalia/colors.py"
+post_hook   = "sh ~/.config/qutebrowser/noctalia/reload.sh"
+
+[theme.templates.user.qutebrowser-startpage]
+input_path  = "~/.config/qutebrowser/startpage/template.css"
+output_path = "~/.config/qutebrowser/startpage/colors.css"
+post_hook   = ""
+
+[theme.templates.user.zapfast]
+input_path_modes = { dark = "$XDG_CONFIG_HOME/noctalia/templates/zapfast-dark.json", light = "$XDG_CONFIG_HOME/noctalia/templates/zapfast-light.json" }
+output_path = "$XDG_CONFIG_HOME/zapfast/themes/noctalia.json"
+post_hook = "zapfast reload-themes >/dev/null 2>&1 || true"
+requires_path = "$XDG_CONFIG_HOME/zapfast"
+
+[theme.templates.user.starship]
+input_path = "$XDG_CONFIG_HOME/noctalia/templates/starship.toml"
+output_path = "$XDG_CONFIG_HOME/starship.toml"
+
+[theme.templates.user.labwc]
+input_path = "~/.config/labwc/template/labwc.conf"
+output_path = "~/.config/labwc/noctalia.conf"
+post_hook = "bash ~/.config/labwc/template/apply.sh"
+undo_hook = "bash ~/.config/labwc/template/undo.sh"
+
+[theme.templates.user.noctalia-papirus]
+input_path  = "~/.config/noctalia/templates/Noctalia-Papirus.sh"
+output_path = "~/.cache/noctalia/Noctalia-Papirus-apply.sh"
+post_hook   = "bash ~/.cache/noctalia/Noctalia-Papirus-apply.sh"
+
+[theme.templates.user.noctalia-flat]
+input_path  = "~/.config/noctalia/templates/Noctalia-Flat.sh"
+output_path = "~/.cache/noctalia/Noctalia-Flat-apply.sh"
+post_hook   = "bash ~/.cache/noctalia/Noctalia-Flat-apply.sh"
+
+[theme.templates.user.noctalia-tela]
+input_path  = "~/.config/noctalia/templates/Noctalia-Tela.sh"
+output_path = "~/.cache/noctalia/Noctalia-Tela-apply.sh"
+post_hook   = "bash ~/.cache/noctalia/Noctalia-Tela-apply.sh"
+
+[theme.templates.user.noctalia-reversal]
+input_path  = "~/.config/noctalia/templates/Noctalia-Reversal.sh"
+output_path = "~/.cache/noctalia/Noctalia-Reversal-apply.sh"
+post_hook   = "bash ~/.cache/noctalia/Noctalia-Reversal-apply.sh"
+
+[theme.templates.user.noctalia-zafiro]
+input_path  = "~/.config/noctalia/templates/Noctalia-Zafiro.sh"
+output_path = "~/.cache/noctalia/Noctalia-Zafiro-apply.sh"
+post_hook   = "bash ~/.cache/noctalia/Noctalia-Zafiro-apply.sh"
+
+[theme.templates.user.noctalia-colloid]
+input_path  = "~/.config/noctalia/templates/Noctalia-Colloid.sh"
+output_path = "~/.cache/noctalia/Noctalia-Colloid-apply.sh"
+post_hook   = "bash ~/.cache/noctalia/Noctalia-Colloid-apply.sh"

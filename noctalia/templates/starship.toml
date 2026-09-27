@@ -1,0 +1,21 @@
+palette = "noctalia"
+
+[palettes.noctalia]
+<* for name, value in colors *>
+{{ name }} = "{{ value.default.hex }}"
+<* endfor *>
+
+[username]
+show_always = true
+# format = "[$user@]($style)"
+format = "[$user ]($style)"
+style_user = "primary"
+
+# [hostname]
+# ssh_only = false
+# format = "[$hostname: ]($style)"
+# style = "primary"
+
+[character]
+success_symbol = "[▪](secondary)"
+error_symbol = "[▪](error)"
