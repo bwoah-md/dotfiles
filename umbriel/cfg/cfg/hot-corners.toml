@@ -1,0 +1,21 @@
+# Top left opens overview; others remain inactive templates.
+
+[hot_corners.top_left]
+enabled = true
+delay_ms = 50
+action = "overview-open"
+
+# [hot_corners.top_right]
+# enabled = false
+# delay_ms = 500
+# action = "spawn:noctalia msg panel-toggle control-center"
+
+# [hot_corners.bottom_left]
+# enabled = false
+# delay_ms = 500
+# action = "spawn:noctalia msg window-switcher"
+
+# [hot_corners.bottom_right]
+# enabled = false
+# delay_ms = 500
+# action = "spawn:noctalia msg panel-toggle launcher"

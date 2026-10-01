@@ -1,0 +1,65 @@
+# ─── Layer Rules (Noctalia Shell) ───
+
+# Window-Switcher
+[[layer_rule]]
+match.namespace = "^noctalia-(window-switcher)$"
+blur = true
+blur_popups = false
+blur_optimized = false
+blur_ignore_alpha = 0.5
+
+# Notification
+[[layer_rule]]
+match.namespace = "^noctalia-(notification)$"
+blur = true
+blur_popups = false
+blur_optimized = false
+blur_ignore_alpha = 0.5
+
+# OSD
+[[layer_rule]]
+match.namespace = "^noctalia-(osd)$"
+blur = true
+blur_popups = false
+blur_optimized = false
+blur_ignore_alpha = 0.5
+
+# Bars
+[[layer_rule]]
+match.namespace = "^noctalia-(bar-[^\"]+)$"
+blur = true
+blur_popups = false
+blur_optimized = false
+blur_ignore_alpha = 0.5
+
+# Bar - Flat
+[[layer_rule]]
+match.namespace = "^noctalia-(bar-Flat)$"
+blur = true
+blur_popups = false
+blur_optimized = false
+blur_ignore_alpha = 0.5
+
+# Panels
+[[layer_rule]]
+match.namespace = "^noctalia-(panel)$"
+blur = true
+blur_popups = false
+blur_optimized = false
+blur_ignore_alpha = 0.5
+
+# Attached Panels
+[[layer_rule]]
+match.namespace = "^noctalia-(attached-panel)$"
+blur = true
+blur_popups = false
+blur_optimized = false
+blur_ignore_alpha = 0.5
+
+# Dock
+[[layer_rule]]
+match.namespace = "^noctalia-(dock)$"
+blur = true
+blur_popups = false
+blur_optimized = false
+blur_ignore_alpha = 0.5

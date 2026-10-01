@@ -1,0 +1,10 @@
+[overview]
+zoom = 0.5                                  # applicable values: 0.1-0.75
+background_blur = true
+shortcuts = true
+shortcut_keys = "abcdefghijklmnopqrstuvwxyz"
+workspace_wallpaper = true
+
+[colors.overview]
+background_tint = "#10101430"
+workspace_background = "#00000044"

@@ -51,7 +51,7 @@
     <!-- Base Binds -->
     <keybind key="W-Return"><action name="Execute" command="kitty"/></keybind>
     <keybind key="W-C-e"><action name="Execute" command="kitty yazi"/></keybind>
-    <keybind key="W-b"><action name="Execute" command="firefox-beta"/></keybind>
+    <keybind key="W-b"><action name="Execute" command="firefox"/></keybind>
     <keybind key="W-e"><action name="Execute" command="pcmanfm-qt --new-window"/></keybind>
 
     <!-- Noctalia Launcher -->
@@ -191,7 +191,7 @@
     <windowRule identifier="Mullvad Browser"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
     <windowRule identifier="Tor Browser"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
     <windowRule identifier="org.qutebrowser.qutebrowser"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
-    <windowRule identifier="firefox-beta"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
+    <windowRule identifier="firefox"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
   </windowRules>
 
   <focus>
