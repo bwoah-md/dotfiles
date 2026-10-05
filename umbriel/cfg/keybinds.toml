@@ -3,7 +3,7 @@
 # ── Applications ──
 "Mod+Return" = "spawn:foot"
 "Mod+Ctrl+E" = "spawn:foot --class=yazi.filemanager -e yazi"
-"Mod+B" = "spawn:firefox-beta"
+"Mod+B" = "spawn:librewolf"
 "Mod+E" = "spawn:pcmanfm-qt --new-window"
 
 # ── Panels ──

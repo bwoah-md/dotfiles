@@ -51,7 +51,7 @@
     <!-- Base Binds -->
     <keybind key="W-Return"><action name="Execute" command="kitty"/></keybind>
     <keybind key="W-C-e"><action name="Execute" command="kitty yazi"/></keybind>
-    <keybind key="W-b"><action name="Execute" command="firefox"/></keybind>
+    <keybind key="W-b"><action name="Execute" command="librewolf"/></keybind>
     <keybind key="W-e"><action name="Execute" command="pcmanfm-qt --new-window"/></keybind>
 
     <!-- Noctalia Launcher -->

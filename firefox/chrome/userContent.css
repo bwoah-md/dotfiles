@@ -1,0 +1,12 @@
+@-moz-document url-prefix("about:"), url-prefix("chrome:") {
+  :root {
+    --border-radius-small: 0 !important;
+    --border-radius-medium: 0 !important;
+    --border-radius-large: 0 !important;
+    --border-radius-xlarge: 0 !important;
+    --border-radius-circle: 0 !important;
+  }
+  * {
+    border-radius: 0 !important;
+  }
+}
