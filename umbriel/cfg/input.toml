@@ -24,8 +24,8 @@ scroll_wheel_step = 60
 enabled = true
 
 [input.cursor]
-theme = ""
-size = 23
+theme = "capitaine-cursors-white"
+size = 32
 follows_focus = true
 hardware_cursor = true
 hide_when_typing = false

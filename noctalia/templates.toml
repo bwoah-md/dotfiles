@@ -8,6 +8,12 @@ input_path  = "~/.config/qutebrowser/startpage/template.css"
 output_path = "~/.config/qutebrowser/startpage/colors.css"
 post_hook   = ""
 
+[theme.templates.user.tuios]
+input_path    = "$XDG_CONFIG_HOME/noctalia/templates/tuios.json"
+output_path   = "$XDG_CONFIG_HOME/tuios/themes/noctalia.json"
+requires_path = "$XDG_CONFIG_HOME/tuios"
+post_hook     = "tuios set-config appearance.theme noctalia >/dev/null 2>&1 || true"
+
 [theme.templates.user.zapfast]
 input_path_modes = { dark = "$XDG_CONFIG_HOME/noctalia/templates/zapfast-dark.json", light = "$XDG_CONFIG_HOME/noctalia/templates/zapfast-light.json" }
 output_path = "$XDG_CONFIG_HOME/zapfast/themes/noctalia.json"

@@ -1,12 +1,17 @@
-/* Apply Annotation Mono globally across primary UI elements */
+/* Apply fonts globally across primary UI elements */
+
+html {
+	font-size: calc(15.4px + 1px) !important;
+}
+
 :root {
-  --font-primary: "Annotation Mono", monospace !important;
-  --font-display: "Annotation Mono", monospace !important;
-  --font-code: "Annotation Mono", monospace !important;
-  --font-headline: "Annotation Mono", monospace !important;
+  --font-primary: monospace !important;
+  --font-display: monospace !important;
+  --font-code: monospace !important;
+  --font-headline: monospace !important;
 }
 
 /* Force apply to all elements in case specific components bypass root vars */
 * {
-  font-family: "Annotation Mono", monospace !important;
+  font-family: monospace !important;
 }

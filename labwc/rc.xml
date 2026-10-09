@@ -53,6 +53,7 @@
     <keybind key="W-C-e"><action name="Execute" command="kitty yazi"/></keybind>
     <keybind key="W-b"><action name="Execute" command="librewolf"/></keybind>
     <keybind key="W-e"><action name="Execute" command="pcmanfm-qt --new-window"/></keybind>
+    <keybind key="W-z"><action name="Execute" command="zeditor"/></keybind>
 
     <!-- Noctalia Launcher -->
     <keybind key="Super_L" onRelease="yes"><action name="Execute" command="noctalia msg panel-toggle launcher"/></keybind>
@@ -191,7 +192,8 @@
     <windowRule identifier="Mullvad Browser"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
     <windowRule identifier="Tor Browser"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
     <windowRule identifier="org.qutebrowser.qutebrowser"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
-    <windowRule identifier="firefox"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
+    <windowRule identifier="librewolf"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
+    <windowRule identifier="foot"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
   </windowRules>
 
   <focus>

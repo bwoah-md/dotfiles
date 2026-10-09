@@ -46,41 +46,24 @@
 
   /* ─────────────────────────────────────────────
      Container tabs
-     Replace the default top container line
-     with a subtle container-colored border
      ───────────────────────────────────────────── */
-
-  /* Remove the default container color line */
   .tab-context-line {
     display: none !important;
   }
 
-  /* Subtle container outline */
   .tabbrowser-tab[usercontextid] .tab-background {
     outline: 1px solid
-      color-mix(
-        in srgb,
-        var(--identity-tab-color) 45%,
-        transparent
-      ) !important;
-
+      color-mix(in srgb, var(--identity-tab-color) 45%, transparent) !important;
     outline-offset: -1px !important;
   }
 
-  /* Stronger outline for the active container tab */
   .tabbrowser-tab[usercontextid][selected] .tab-background,
   .tabbrowser-tab[usercontextid][visuallyselected] .tab-background {
     outline: 2px solid
-      color-mix(
-        in srgb,
-        var(--identity-tab-color) 75%,
-        transparent
-      ) !important;
-
+      color-mix(in srgb, var(--identity-tab-color) 75%, transparent) !important;
     outline-offset: -2px !important;
   }
 
-  /* Very subtle container tint */
   .tabbrowser-tab[usercontextid] .tab-background {
     background-color: color-mix(
       in srgb,
@@ -97,5 +80,94 @@
       transparent
     ) !important;
   }
+
+
+  /* ═════════════════════════════════════════════
+     SIDEBERY [1/3] — hide Firefox sidebar header
+     (sidebar.revamp: true)
+     ═════════════════════════════════════════════ */
+  #sidebar-panel-header {
+    display: none !important;
+  }
+
+
+  /* ═════════════════════════════════════════════
+     SIDEBERY [2/3] — always-on (no titlepreface condition)
+     ═════════════════════════════════════════════ */
+
+  /* SIDEBERY: hide horizontal native tabs toolbar */
+  #TabsToolbar > * {
+    display: none !important;
+  }
+
+  /* SIDEBERY: hide top window border */
+  #nav-bar {
+    border-color: transparent !important;
+  }
+
+  /* SIDEBERY: hide native vertical tabs / sidebar launcher */
+  #sidebar-main, #sidebar-container, #sidebar-launcher-splitter {
+    display: none !important;
+  }
+
+  #sidebar-box {
+    padding: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+  }
+
+  #sidebar-box #sidebar {
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+    border-radius: 0 !important;
+  }
+
+  #sidebar-splitter {
+    --splitter-width: 3px !important;
+    min-width: var(--splitter-width) !important;
+    width: var(--splitter-width) !important;
+    padding: 0 !important;
+    margin: 0 calc(-1*var(--splitter-width) + 1px) 0 0 !important;
+    border: 0 !important;
+    opacity: 0 !important;
+  }
+
+  /* SIDEBERY-TOPBORDER: adjustable top line, aligned with the page-area line */
+  #sidebar-box {
+    --sb-nudge: -1px;  /* try 0px, 1px, 2px, 3px until it lines up */
+    --sb-line-color: var(--toolbar-field-border-color, rgba(255,255,255,0.15));
+    position: relative !important;
+    border-top: none !important;
+  }
+  #sidebar-box::before {
+    content: "";
+    position: absolute;
+    top: var(--sb-nudge);
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--sb-line-color);
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  /* SIDEBERY-BORDER-FIX: remove Firefox toolbox border / shadow */
+  #navigator-toolbox,
+  #nav-bar {
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+  }
+
+  /* SIDEBERY: window buttons in nav-bar — leave commented to avoid the close button */
+  /* #nav-bar > .titlebar-buttonbox-container,
+  #nav-bar > .titlebar-buttonbox-container > .titlebar-buttonbox {
+    display: flex !important;
+  } */
+
+  /* SIDEBERY: spacers near window buttons (optional, off by default) */
+  /* #nav-bar > .titlebar-spacer[type="pre-tabs"] { display: flex !important; } */
+  /* #nav-bar > .titlebar-spacer[type="post-tabs"] { display: flex !important; } */
 
 }

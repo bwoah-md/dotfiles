@@ -5,6 +5,7 @@
 "Mod+Ctrl+E" = "spawn:foot --class=yazi.filemanager -e yazi"
 "Mod+B" = "spawn:librewolf"
 "Mod+E" = "spawn:pcmanfm-qt --new-window"
+"Mod+Z" = "spawn:zeditor"
 
 # ── Panels ──
 "Mod" = "spawn:noctalia msg panel-toggle launcher"

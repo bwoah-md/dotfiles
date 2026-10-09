@@ -1,9 +1,0 @@
-[general]
-autostart = [
-    # ==========================================================================================
-    # NOTE: Remove this line before you apply this script in umbriel otherwise system won't load
-    # ==========================================================================================
-    "cp -f \"$HOME/.config/umbriel/noctalia/config.toml\" \"$HOME/.config/noctalia/config.toml\"",
-    "noctalia",
-    "kdeconnectd"
-]

@@ -498,9 +498,6 @@
         "SuperReactionTweaks": {
             "enabled": false
         },
-        "TenorGifSearch": {
-            "enabled": false
-        },
         "TextReplace": {
             "enabled": false
         },
@@ -1263,6 +1260,9 @@
         },
         "AddAttachments": {
             "enabled": true
+        },
+        "GifProviderSwitcher": {
+            "enabled": false
         }
     },
     "uiElements": {
@@ -1280,7 +1280,8 @@
         "authenticated": false,
         "url": "https://cloud.equicord.org/",
         "settingsSync": false,
-        "settingsSyncVersion": 1789100440698
+        "settingsSyncVersion": 1791432404176
     },
-    "ignoreResetWarning": false
+    "ignoreResetWarning": false,
+    "nativeTitleBar": false
 }
