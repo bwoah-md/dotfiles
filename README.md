@@ -4,6 +4,11 @@ Personal configuration files maintained separately from the NixOS system configu
 
 The live configurations remain in their normal locations under `~/.config`.
 
+#### Credits
+
+- A lot of colorschemes for `noctalia/palettes/` have been taken from [github.com/ezequielgk/noctalia-colorschemes](https://github.com/ezequielgk/noctalia-colorschemes)
+- Custom template for LabWC is taken from [github.com/ezequielgk/noctalia-personal0templates](https://github.com/ezequielgk/noctalia-personal-templates)
+
 ## NixOS
 
 ```text
