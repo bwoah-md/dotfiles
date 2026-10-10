@@ -1,0 +1,248 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+command_timeout = 1000
+palette = "matugen"
+
+
+format = "$username$directory$time${env_var.OS_KERNEL}$git_branch$git_status$nodejs$python$c$cpp$rust$java$golang$ruby$php\n$character"
+
+
+[palettes.matugen]
+primary = "{{colors.primary.default.hex}}"
+on_primary = "{{colors.on_primary.default.hex}}"
+secondary = "{{colors.secondary.default.hex}}"
+on_secondary = "{{colors.on_secondary.default.hex}}"
+tertiary = "{{colors.tertiary.default.hex}}"
+on_tertiary = "{{colors.on_tertiary.default.hex}}"
+error = "{{colors.error.default.hex}}"
+on_error = "{{colors.on_error.default.hex}}"
+surface = "{{colors.surface.default.hex}}"
+on_surface = "{{colors.on_surface.default.hex}}"
+surface_variant = "{{colors.surface_variant.default.hex}}"
+on_surface_variant = "{{colors.on_surface_variant.default.hex}}"
+outline = "{{colors.outline.default.hex}}"
+shadow = "{{colors.shadow.default.hex}}"
+hover = "{{colors.primary_fixed.default.hex}}"
+on_hover = "{{colors.on_primary_fixed.default.hex}}"
+
+
+[username]
+show_always = true
+style_user = "fg:primary bold"
+style_root = "fg:error bold"
+format = '[$user]($style) '
+disabled = false
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "fg:primary bold"
+read_only = " 󰌾"
+read_only_style = "fg:error"
+format = '[$path$read_only]($style) '
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "fg:secondary bold"
+format = '[$time]($style) '
+
+[env_var.OS_KERNEL]
+variable = "OS_KERNEL"
+style = "fg:primary"
+format = '[$env_value]($style) '
+
+[character]
+success_symbol = "[▪](bold fg:primary)"
+error_symbol   = "[▪](bold fg:error)"
+
+
+[git_branch]
+symbol = " "
+style = "fg:tertiary bold"
+format = '[$symbol$branch]($style) '
+
+[git_status]
+style = "fg:tertiary"
+format = '([$all_status$ahead_behind]($style) )'
+
+[git_commit]
+tag_symbol = '  '
+
+
+[nodejs]
+symbol = " "
+style = "fg:primary"
+format = '[$symbol$version]($style) '
+
+[python]
+symbol = " "
+style = "fg:primary"
+format = '[${symbol}${pyenv_prefix}(${version})]($style) '
+
+[java]
+symbol = " "
+style = "fg:primary"
+format = '[$symbol$version]($style) '
+
+[c]
+symbol = " "
+style = "fg:primary"
+format = '[$symbol$version]($style) '
+
+[cpp]
+symbol = " "
+style = "fg:primary"
+format = '[$symbol$version]($style) '
+
+[rust]
+symbol = "󱘗 "
+style = "fg:primary"
+format = '[$symbol$version]($style) '
+
+[golang]
+symbol = " "
+style = "fg:primary"
+format = '[$symbol$version]($style) '
+
+[ruby]
+symbol = " "
+style = "fg:primary"
+format = '[$symbol$version]($style) '
+
+[php]
+symbol = " "
+style = "fg:primary"
+format = '[$symbol$version]($style) '
+
+
+[aws]
+symbol = " "
+[buf]
+symbol = " "
+[bun]
+symbol = " "
+[cmake]
+symbol = " "
+[conda]
+symbol = " "
+[crystal]
+symbol = " "
+[dart]
+symbol = " "
+[deno]
+symbol = " "
+[docker_context]
+symbol = " "
+[elixir]
+symbol = " "
+[elm]
+symbol = " "
+[fennel]
+symbol = " "
+[fortran]
+symbol = " "
+[fossil_branch]
+symbol = " "
+[gcloud]
+symbol = " "
+[gradle]
+symbol = " "
+[guix_shell]
+symbol = " "
+[haskell]
+symbol = " "
+[haxe]
+symbol = " "
+[hg_branch]
+symbol = " "
+[hostname]
+ssh_symbol = " "
+[julia]
+symbol = " "
+[kotlin]
+symbol = " "
+[lua]
+symbol = " "
+[memory_usage]
+symbol = "󰍛 "
+[meson]
+symbol = "󰔷 "
+[nim]
+symbol = "󰆥 "
+[nix_shell]
+symbol = " "
+[ocaml]
+symbol = " "
+[package]
+symbol = "󰏗 "
+[perl]
+symbol = " "
+[pijul_channel]
+symbol = " "
+[pixi]
+symbol = "󰏗 "
+[rlang]
+symbol = "󰟔 "
+[scala]
+symbol = " "
+[status]
+symbol = " "
+[swift]
+symbol = " "
+[xmake]
+symbol = " "
+[zig]
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+AOSC = " "
+Arch = " "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Elementary = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Ios = "󰀷 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+Zorin = " "

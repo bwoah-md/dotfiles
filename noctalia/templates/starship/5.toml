@@ -1,0 +1,387 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+command_timeout = 1000
+palette = "matugen"
+
+format = "$env_var$username$directory$git_branch$git_status$nodejs$python$c$cpp$rust$java$golang$ruby$php$character"
+
+[palettes.matugen]
+primary = "{{colors.primary.default.hex}}"
+on_primary = "{{colors.on_primary.default.hex}}"
+secondary = "{{colors.secondary.default.hex}}"
+on_secondary = "{{colors.on_secondary.default.hex}}"
+tertiary = "{{colors.tertiary.default.hex}}"
+on_tertiary = "{{colors.on_tertiary.default.hex}}"
+error = "{{colors.error.default.hex}}"
+on_error = "{{colors.on_error.default.hex}}"
+surface = "{{colors.surface.default.hex}}"
+on_surface = "{{colors.on_surface.default.hex}}"
+surface_variant = "{{colors.surface_variant.default.hex}}"
+on_surface_variant = "{{colors.on_surface_variant.default.hex}}"
+outline = "{{colors.outline.default.hex}}"
+shadow = "{{colors.shadow.default.hex}}"
+hover = "{{colors.primary_fixed.default.hex}}"
+on_hover = "{{colors.on_primary_fixed.default.hex}}"
+
+pill_shell = "{{colors.surface_variant.default.hex}}"
+pill_user  = "{{colors.surface_variant.default.hex | lighten: 4.0}}"
+pill_dir   = "{{colors.surface_variant.default.hex | lighten: 8.0}}"
+
+
+# Pill 1: shell  ->  /bin/zsh
+[env_var.SHELL]
+variable = "SHELL"
+format = "[ $env_value ](bg:pill_shell fg:outline)"
+
+# Pill 2: usuario  ->  ezequiel
+[username]
+show_always = true
+style_user = "bg:pill_user fg:on_surface bold"
+style_root = "bg:pill_user fg:error bold"
+format = "[ $user ]($style)"
+disabled = false
+
+# Pill 3: directorio  ->  ~
+[directory]
+home_symbol = "~"
+truncation_length = 3
+truncate_to_repo = true
+read_only = " 󰌾"
+read_only_style = "bg:pill_dir fg:error"
+style = "bg:pill_dir fg:primary"
+format = "[ $path$read_only ]($style) "
+
+# Prompt  ->  ❯
+[character]
+success_symbol = "[❯](fg:on_surface_variant)"
+error_symbol   = "[❯](fg:error)"
+
+[git_branch]
+symbol = " "
+style = "fg:tertiary bold"
+format = '[$symbol$branch]($style) '
+
+[git_status]
+style = "fg:tertiary"
+format = '([$all_status$ahead_behind]($style) )'
+
+[git_commit]
+tag_symbol = '  '
+
+[nodejs]
+symbol = " "
+style = "fg:primary"
+format = '[$symbol$version]($style) '
+
+[python]
+symbol = " "
+style = "fg:primary"
+format = '[${symbol}${pyenv_prefix}(${version})]($style) '
+
+[java]
+symbol = " "
+style = "fg:primary"
+format = '[$symbol$version]($style) '
+
+[c]
+symbol = " "
+style = "fg:primary"
+format = '[$symbol$version]($style) '
+
+[cpp]
+symbol = " "
+style = "fg:primary"
+format = '[$symbol$version]($style) '
+
+[rust]
+symbol = "󱘗 "
+style = "fg:primary"
+format = '[$symbol$version]($style) '
+
+[golang]
+symbol = " "
+style = "fg:primary"
+format = '[$symbol$version]($style) '
+
+[ruby]
+symbol = " "
+style = "fg:primary"
+format = '[$symbol$version]($style) '
+
+[php]
+symbol = " "
+style = "fg:primary"
+format = '[$symbol$version]($style) '
+
+
+[aws]
+symbol = " "
+
+[azure]
+symbol = " "
+
+[battery]
+full_symbol = "󰁹 "
+charging_symbol = "󰂄 "
+discharging_symbol = "󰂃 "
+unknown_symbol = "󰂑 "
+empty_symbol = "󰂎 "
+
+[buf]
+symbol = " "
+
+[bun]
+symbol = " "
+
+[cmake]
+symbol = " "
+
+[cobol]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[container]
+symbol = " "
+
+[crystal]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[deno]
+symbol = " "
+
+[direnv]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[dotnet]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[erlang]
+symbol = " "
+
+[fennel]
+symbol = " "
+
+[fortran]
+symbol = " "
+
+[fossil_branch]
+symbol = " "
+
+[gcloud]
+symbol = "󱇶 "
+
+[gleam]
+symbol = " "
+
+[gradle]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = " "
+
+[helm]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[hostname]
+ssh_symbol = " "
+
+[julia]
+symbol = " "
+
+[kotlin]
+symbol = " "
+
+[kubernetes]
+symbol = "󱃾 "
+
+[lua]
+symbol = " "
+
+[maven]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[mojo]
+symbol = "󰈸 "
+
+[nats]
+symbol = " "
+
+[netns]
+symbol = "󰛳 "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[ocaml]
+symbol = " "
+
+[odin]
+symbol = "󰟢 "
+
+[opa]
+symbol = " "
+
+[openstack]
+symbol = " "
+
+[os.symbols]
+AIX = " "
+AlmaLinux = " "
+Alpaquita = " "
+Alpine = " "
+ALTLinux = " "
+Amazon = " "
+Android = " "
+AOSC = " "
+Arch = " "
+Artix = " "
+Bluefin = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Elementary = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = " "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = " "
+InstantOS = " "
+Ios = "󰀷 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = " "
+OpenCloudOS = " "
+openEuler = " "
+openSUSE = " "
+OracleLinux = "󰺡 "
+PikaOS = " "
+Pop = " "
+Raspbian = " "
+Redhat = "󱄛 "
+RedHatEnterprise = "󱄛 "
+Redox = "󰀘 "
+RockyLinux = " "
+Solus = " "
+SUSE = " "
+Ubuntu = " "
+Ultramarine = " "
+Unknown = " "
+Uos = " "
+Void = " "
+Windows = "󰍲 "
+Zorin = " "
+
+[package]
+symbol = "󰏗 "
+
+[perl]
+symbol = " "
+
+[pijul_channel]
+symbol = " "
+
+[pixi]
+symbol = "󰏗 "
+
+[pulumi]
+symbol = " "
+
+[purescript]
+symbol = " "
+
+[raku]
+symbol = "󱖊 "
+
+[red]
+symbol = "󱍼 "
+
+[rlang]
+symbol = "󰟔 "
+
+[scala]
+symbol = " "
+
+[shlvl]
+symbol = "󰹍 "
+
+[singularity]
+symbol = " "
+
+[solidity]
+symbol = " "
+
+[spack]
+symbol = " "
+
+[status]
+symbol = " "
+
+[sudo]
+symbol = " "
+
+[swift]
+symbol = " "
+
+[terraform]
+symbol = " "
+
+[vlang]
+symbol = " "
+
+[typst]
+symbol = " "
+
+[vagrant]
+symbol = " "
+
+[xmake]
+symbol = " "
+
+[zig]
+symbol = " "

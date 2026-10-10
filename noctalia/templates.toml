@@ -21,7 +21,7 @@ post_hook = "zapfast reload-themes >/dev/null 2>&1 || true"
 requires_path = "$XDG_CONFIG_HOME/zapfast"
 
 [theme.templates.user.starship]
-input_path = "$XDG_CONFIG_HOME/noctalia/templates/starship.toml"
+input_path = "$XDG_CONFIG_HOME/noctalia/templates/starship/1.toml"
 output_path = "$XDG_CONFIG_HOME/starship.toml"
 
 [theme.templates.user.labwc]
