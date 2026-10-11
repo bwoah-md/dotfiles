@@ -1,0 +1,115 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+command_timeout = 1000
+palette = "noctalia"
+
+# $all = every module not listed explicitly (cmd_duration, nix_shell, languages, etc.)
+format = "[┌─](fg:outline) $username$directory$time${env_var.OS_KERNEL}$git_branch$git_status$all\n[└─](fg:outline) $character"
+
+[palettes.noctalia]
+<* for name, value in colors *>
+{{ name }} = "{{ value.default.hex }}"
+<* endfor *>
+
+# $all would insert its own line break, so turn the extra one off
+[line_break]
+disabled = true
+
+[cmd_duration]
+min_time = 2000
+show_milliseconds = false
+format = '[ took $duration ]($style) '
+style = "bg:secondary fg:on_secondary"
+
+[username]
+show_always = true
+style_user = "bg:surface_variant fg:primary"
+style_root = "bg:error fg:on_error"
+format = '[ $user ]($style) '
+disabled = false
+
+[directory]
+truncation_length = 3
+truncate_to_repo = false
+style = "bg:primary fg:on_primary bold"
+read_only = " \U000f033e"
+read_only_style = "bg:primary fg:error"
+format = '[ $path$read_only ]($style)  '
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "fg:primary bold"
+format = '[$time]($style)  '
+
+[env_var.OS_KERNEL]
+variable = "OS_KERNEL"
+style = "bg:primary fg:on_primary bold"
+format = '[ $env_value ]($style) '
+
+[character]
+success_symbol = "[❯](bold fg:primary)"
+error_symbol   = "[❯](bold fg:error)"
+
+[git_branch]
+symbol = "\ue0a0 "
+style = "bg:tertiary fg:on_tertiary"
+format = '[ $symbol$branch ]($style) '
+
+[git_status]
+style = "bg:tertiary fg:on_tertiary"
+format = '([$all_status$ahead_behind]($style) )'
+
+[nix_shell]
+symbol = "\uf313 "
+style = "bg:secondary fg:on_secondary"
+format = '[ $symbol$state( \($name\)) ]($style) '
+
+[nodejs]
+symbol = "\ue718 "
+style = "bg:primary fg:on_primary"
+format = '[ $symbol$version ]($style) '
+
+[python]
+symbol = "\ue73c "
+style = "bg:primary fg:on_primary"
+format = '[ ${symbol}${pyenv_prefix}(${version} )]($style) '
+
+[java]
+symbol = "\ue256 "
+style = "bg:primary fg:on_primary"
+format = '[ $symbol$version ]($style) '
+
+[c]
+symbol = "\ue61e "
+style = "bg:primary fg:on_primary"
+format = '[ $symbol$version ]($style) '
+
+[cpp]
+symbol = "\ue61d "
+style = "bg:primary fg:on_primary"
+format = '[ $symbol$version ]($style) '
+
+[rust]
+symbol = "\U000f1617 "
+style = "bg:primary fg:on_primary"
+format = '[ $symbol$version ]($style) '
+
+[golang]
+symbol = "\ue626 "
+style = "bg:primary fg:on_primary"
+format = '[ $symbol$version ]($style) '
+
+[ruby]
+symbol = "\ue791 "
+style = "bg:primary fg:on_primary"
+format = '[ $symbol$version ]($style) '
+
+[php]
+symbol = "\ue608 "
+style = "bg:primary fg:on_primary"
+format = '[ $symbol$version ]($style) '
+
+[package]
+symbol = "\U000f03d7 "
