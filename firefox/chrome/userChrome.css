@@ -198,7 +198,9 @@
     pointer-events: none;
   }
 
-  /* SIDEBERY [3/3] — remove toolbar borders and shadows */
+  /* ═════════════════════════════════════════════
+     SIDEBERY [3/3] — remove toolbar borders and shadows
+     ═════════════════════════════════════════════ */
 
   /* SIDEBERY: remove toolbar borders and shadows */
   #navigator-toolbox,
@@ -217,6 +219,11 @@
   /* SIDEBERY: spacers near window buttons (optional, off by default) */
   /* #nav-bar > .titlebar-spacer[type="pre-tabs"] { display: flex !important; } */
   /* #nav-bar > .titlebar-spacer[type="post-tabs"] { display: flex !important; } */
+
+  /* Fix the unwanted browser-generated navbar line */
+  #nav-bar.browser-toolbar::before {
+    display: none !important;
+  }
 
 }
 
