@@ -6,7 +6,25 @@
     --border-radius-xlarge: 0 !important;
     --border-radius-circle: 0 !important;
   }
+
   * {
     border-radius: 0 !important;
+  }
+}
+
+/* Hide the New Tab Customize button until hovered */
+@-moz-document url-prefix(about:home), url-prefix(about:newtab) {
+  .open-customization-button {
+    opacity: 0 !important;
+    transition: opacity 0.2s ease !important;
+  }
+
+  .open-customization-button:hover,
+  .personalize-button-wrapper:hover .open-customization-button {
+    opacity: 1 !important;
+  }
+
+  .personalize-button-wrapper {
+    opacity: 1 !important;
   }
 }
