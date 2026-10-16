@@ -1,3 +1,49 @@
+/*
+ * Dynamic Firefox / Pywalfox theme colors
+ * Colors update with the active theme when controlled by theme settings.
+ *
+ * Main surfaces
+ * var(--tabpanel-background-color)
+ * var(--sidebar-background-color)
+ * var(--newtab-background-color)
+ * var(--newtab-background-color-secondary)
+ *
+ * Text colors
+ * var(--sidebar-text-color)
+ * var(--tab-text-color-selected)
+ * var(--newtab-text-primary-color)
+ * var(--lwt-toolbar-field-highlight-text)
+ *
+ * Accent and icon colors
+ * var(--toolbarbutton-icon-fill)
+ * var(--toolbarbutton-icon-fill-attention)
+ * var(--urlbarview-background-color-selected)
+ * var(--urlbarview-text-color-selected)
+ *
+ * Borders and separators
+ * var(--sidebar-border-color)
+ * var(--chrome-content-separator-color)
+ * var(--toolbarseparator-color)
+ * var(--tabs-navbar-separator-color)
+ * var(--lwt-tab-line-color)
+ *
+ * Toolbar button states
+ * var(--toolbarbutton-background-color-hover)
+ * var(--toolbarbutton-background-color-active)
+ *
+ * Tab backgrounds
+ * var(--tab-background-color-selected)
+ * var(--lwt-accent-color-inactive)
+ *
+ * Other theme colors
+ * var(--lwt-accent-color)
+ *
+ * Useful color combinations
+ * color-mix(in srgb, var(--toolbarbutton-icon-fill) 35%, transparent)
+ * color-mix(in srgb, var(--sidebar-text-color) 20%, transparent)
+ * color-mix(in srgb, var(--toolbarbutton-icon-fill) 50%, var(--sidebar-background-color))
+ */
+
 @-moz-document url-prefix("about:"), url-prefix("chrome:") {
 
   /* ─────────────────────────────────────────────
@@ -7,18 +53,14 @@
     border-radius: 0 !important;
   }
 
-
   /* ─────────────────────────────────────────────
-     Nova: remove floating gaps and content rounding
+     Nova: remove gaps and rounded corners
      ───────────────────────────────────────────── */
-  @media -moz-pref("browser.nova.enabled") {
-    :root {
-      --chrome-window-gap: 0 !important;
-      --chrome-block-radius: 0 !important;
-      --chrome-content-separator-color: none !important;
-    }
+  :root {
+    --chrome-window-gap: 0 !important;
+    --chrome-block-radius: 0 !important;
+    --chrome-content-separator-color: none !important;
   }
-
 
   /* ─────────────────────────────────────────────
      Hide disabled Back / Forward buttons
@@ -28,7 +70,6 @@
     display: none !important;
   }
 
-
   /* ─────────────────────────────────────────────
      Status panel
      ───────────────────────────────────────────── */
@@ -37,13 +78,16 @@
   }
 
   #statuspanel-label {
-    border-radius: 0px !important;
+    border-radius: 0 !important;
     padding: 2px 10px !important;
     border: 1px solid var(--toolbar-field-border-color) !important;
-    background-color: color-mix(in srgb, var(--toolbar-field-border-color) 60%, transparent) !important;
+    background-color: color-mix(
+      in srgb,
+      var(--toolbar-field-border-color) 60%,
+      transparent
+    ) !important;
     color: var(--toolbar-color) !important;
   }
-
 
   /* ─────────────────────────────────────────────
      Container tabs
@@ -56,16 +100,6 @@
     outline: 1px solid
       color-mix(in srgb, var(--identity-tab-color) 45%, transparent) !important;
     outline-offset: -1px !important;
-  }
-
-  .tabbrowser-tab[usercontextid][selected] .tab-background,
-  .tabbrowser-tab[usercontextid][visuallyselected] .tab-background {
-    outline: 2px solid
-      color-mix(in srgb, var(--identity-tab-color) 75%, transparent) !important;
-    outline-offset: -2px !important;
-  }
-
-  .tabbrowser-tab[usercontextid] .tab-background {
     background-color: color-mix(
       in srgb,
       var(--identity-tab-color) 6%,
@@ -75,13 +109,15 @@
 
   .tabbrowser-tab[usercontextid][selected] .tab-background,
   .tabbrowser-tab[usercontextid][visuallyselected] .tab-background {
+    outline: 2px solid
+      color-mix(in srgb, var(--identity-tab-color) 75%, transparent) !important;
+    outline-offset: -2px !important;
     background-color: color-mix(
       in srgb,
       var(--identity-tab-color) 12%,
       transparent
     ) !important;
   }
-
 
   /* ═════════════════════════════════════════════
      SIDEBERY [1/3] — hide Firefox sidebar header
@@ -91,26 +127,29 @@
     display: none !important;
   }
 
-
   /* ═════════════════════════════════════════════
-     SIDEBERY [2/3] — always-on (no titlepreface condition)
+     SIDEBERY [2/3] — always on
+     (no titlepreface condition)
      ═════════════════════════════════════════════ */
 
-  /* SIDEBERY: hide horizontal native tabs toolbar */
+  /* SIDEBERY: hide the horizontal tabs toolbar */
   #TabsToolbar > * {
     display: none !important;
   }
 
-  /* SIDEBERY: hide top window border */
+  /* SIDEBERY: hide the top window border */
   #nav-bar {
     border-color: transparent !important;
   }
 
-  /* SIDEBERY: hide native vertical tabs / sidebar launcher */
-  #sidebar-main, #sidebar-container, #sidebar-launcher-splitter {
+  /* SIDEBERY: hide native vertical tabs and sidebar launcher */
+  #sidebar-main,
+  #sidebar-container,
+  #sidebar-launcher-splitter {
     display: none !important;
   }
 
+  /* SIDEBERY: remove sidebar padding and borders */
   #sidebar-box {
     padding: 0 !important;
     border-radius: 0 !important;
@@ -124,23 +163,29 @@
     border-radius: 0 !important;
   }
 
+  /* SIDEBERY: adjust the sidebar splitter */
   #sidebar-splitter {
     --splitter-width: 3px !important;
     min-width: var(--splitter-width) !important;
     width: var(--splitter-width) !important;
     padding: 0 !important;
-    margin: 0 calc(-1*var(--splitter-width) + 1px) 0 0 !important;
+    margin: 0 calc(-1 * var(--splitter-width) + 1px) 0 0 !important;
     border: 0 !important;
     opacity: 0 !important;
   }
 
-  /* SIDEBERY-TOPBORDER: adjustable top line, aligned with the page-area line */
+  /* SIDEBERY-TOPBORDER: adjust the top line to match the page area */
   #sidebar-box {
-    --sb-nudge: -1px;  /* try 0px, 1px, 2px, 3px until it lines up */
-    --sb-line-color: var(--toolbar-field-border-color, rgba(255,255,255,0.15));
+    --sb-nudge: -1px; /* Try 0px, 1px, 2px, or 3px to align the line. */
+    --sb-line-color: color-mix(
+      in srgb,
+      var(--toolbarbutton-icon-fill) 25%,
+      var(--sidebar-background-color)
+    );
     position: relative !important;
     border-top: none !important;
   }
+
   #sidebar-box::before {
     content: "";
     position: absolute;
@@ -153,7 +198,9 @@
     pointer-events: none;
   }
 
-  /* SIDEBERY-BORDER-FIX: remove Firefox toolbox border / shadow */
+  /* SIDEBERY [3/3] — remove toolbar borders and shadows */
+
+  /* SIDEBERY: remove toolbar borders and shadows */
   #navigator-toolbox,
   #nav-bar {
     border: none !important;
@@ -171,4 +218,60 @@
   /* #nav-bar > .titlebar-spacer[type="pre-tabs"] { display: flex !important; } */
   /* #nav-bar > .titlebar-spacer[type="post-tabs"] { display: flex !important; } */
 
+}
+
+/* ─────────────────────────────────────────────
+   Sidebar splitter
+   ───────────────────────────────────────────── */
+#sidebar-splitter {
+  background: color-mix(
+    in srgb,
+    var(--toolbarbutton-icon-fill) 25%,
+    var(--sidebar-background-color)
+  ) !important;
+  opacity: 1 !important;
+  min-width: 1px !important;
+  width: 1px !important;
+  transform: translateX(-1px) !important;
+}
+
+/* ─────────────────────────────────────────────
+   Navbar separators
+   Keep the navbar dimensions unchanged.
+   ───────────────────────────────────────────── */
+#nav-bar {
+  position: relative !important;
+  border: none !important;
+}
+
+#nav-bar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: color-mix(
+    in srgb,
+    var(--toolbarbutton-icon-fill) 25%,
+    var(--sidebar-background-color)
+  ) !important;
+  pointer-events: none;
+  z-index: 10;
+}
+
+#nav-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: color-mix(
+    in srgb,
+    var(--toolbarbutton-icon-fill) 25%,
+    var(--sidebar-background-color)
+  ) !important;
+  pointer-events: none;
+  z-index: 10;
 }
