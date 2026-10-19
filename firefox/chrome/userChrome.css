@@ -163,17 +163,6 @@
     border-radius: 0 !important;
   }
 
-  /* SIDEBERY: adjust the sidebar splitter */
-  #sidebar-splitter {
-    --splitter-width: 3px !important;
-    min-width: var(--splitter-width) !important;
-    width: var(--splitter-width) !important;
-    padding: 0 !important;
-    margin: 0 calc(-1 * var(--splitter-width) + 1px) 0 0 !important;
-    border: 0 !important;
-    opacity: 0 !important;
-  }
-
   /* SIDEBERY-TOPBORDER: adjust the top line to match the page area */
   #sidebar-box {
     --sb-nudge: -1px; /* Try 0px, 1px, 2px, or 3px to align the line. */
@@ -228,19 +217,36 @@
 }
 
 /* ─────────────────────────────────────────────
-   Sidebar splitter
+   Sidebar Splitter
    ───────────────────────────────────────────── */
-#sidebar-splitter {
-  background: color-mix(
-    in srgb,
-    var(--toolbarbutton-icon-fill) 25%,
-    var(--sidebar-background-color)
-  ) !important;
-  opacity: 1 !important;
-  min-width: 1px !important;
-  width: 1px !important;
-  transform: translateX(-1px) !important;
-}
+   #sidebar-splitter {
+     min-width: 5px !important;
+     width: 5px !important;
+     max-width: 5px !important;
+     margin: 0 !important;
+     padding: 0 !important;
+     border: none !important;
+     transform: translateX(1.5px) !important;
+     opacity: 1 !important;
+     background: linear-gradient(
+       to right,
+       transparent 2px,
+       color-mix(
+         in srgb,
+         var(--toolbarbutton-icon-fill) 25%,
+         var(--sidebar-background-color)
+       ) 2px,
+       color-mix(
+         in srgb,
+         var(--toolbarbutton-icon-fill) 25%,
+         var(--sidebar-background-color)
+       ) 3px,
+       transparent 3px
+     ) !important;
+     cursor: ew-resize !important;
+     -moz-appearance: none !important;
+   }
+
 
 /* ─────────────────────────────────────────────
    Navbar separators
