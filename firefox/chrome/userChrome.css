@@ -243,10 +243,7 @@
        ) 3px,
        transparent 3px
      ) !important;
-     cursor: ew-resize !important;
-     -moz-appearance: none !important;
    }
-
 
 /* ─────────────────────────────────────────────
    Navbar separators
