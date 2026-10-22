@@ -2,7 +2,7 @@
 [[window_rule]]
 blur = true
 blur_optimized = false
-opacity = 0.9
+# opacity = 0.9
 
 # ─── Noctalia / Umbriel ───
 [[window_rule]]
