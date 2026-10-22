@@ -49,8 +49,8 @@
     <repeatDelay>300</repeatDelay>
 
     <!-- Base Binds -->
-    <keybind key="W-Return"><action name="Execute" command="kitty"/></keybind>
-    <keybind key="W-C-e"><action name="Execute" command="kitty yazi"/></keybind>
+    <keybind key="W-Return"><action name="Execute" command="foot"/></keybind>
+    <keybind key="W-C-e"><action name="Execute" command="foot yazi"/></keybind>
     <keybind key="W-b"><action name="Execute" command="librewolf"/></keybind>
     <keybind key="W-e"><action name="Execute" command="pcmanfm-qt --new-window"/></keybind>
     <keybind key="W-z"><action name="Execute" command="zeditor"/></keybind>
@@ -193,7 +193,6 @@
     <windowRule identifier="Tor Browser"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
     <windowRule identifier="org.qutebrowser.qutebrowser"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
     <windowRule identifier="librewolf"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
-    <windowRule identifier="foot"><action name="SetDecorations" decorations="border" forceSSD="yes"/></windowRule>
   </windowRules>
 
   <focus>
