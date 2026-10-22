@@ -1,50 +1,59 @@
 [animation]
 enabled = true
-duration_ms = 200              # Slightly faster than default
-curve = "ease"                 # Smoother than "easeout"
+duration_ms = 195
+curve = "cinematic"             # Smoother than "easeout"; custom Bézier curve
+
+[animation.beziers]
+cinematic = [0.16, 0.84, 0.24, 1.0]
+window_flow = [0.20, 0.75, 0.25, 1.0]
+workspace_flow = [0.20, 0.80, 0.24, 1.0]
+
+[animation.springs]
+apparition = { damping = 0.70, stiffness = 240 }
 
 [animation.windows_in]
 enabled = true
-duration_ms = 150
-curve = "ease"
-style = "popin"                # popin, zoom, slide, fade, none
-scale = 0.90                   # More subtle pop-in (default is 0.85)
+curve = "apparition"
+style = "popin"                 # popin, zoom, slide, fade, none
+scale = 0.90                    # More subtle pop-in (default is 0.85)
 # shader  = "../shaders/.glsl"
 
 [animation.windows_out]
 enabled = true
-duration_ms = 150
-curve = "ease"
-style = "fade"                 # fade, slide
+duration_ms = 165
+curve = "easeoutcubic"
+style = "fade"                  # fade, slide
 # shader  = "../shaders/.glsl"
 
 [animation.windows_move]
 enabled = true
-duration_ms = 200
-curve = "snappy"               # Snappy is best for window movement
+duration_ms = 195
+curve = "window_flow"          # Snappy is another option for window movement
 # shader  = "../shaders/.glsl"
 
 [animation.workspaces]
 enabled = true
-duration_ms = 200
-curve = "ease"
+duration_ms = 225
+curve = "workspace_flow"
 # shader  = "../shaders/.glsl"
 
 [animation.overview]
+enabled = true
+duration_ms = 280
+curve = "cinematic"
+workspace_curve = "workspace_flow"
+# Previous settings:
 #enabled = true
 #duration_ms = 200
 #curve = "ease"
 # shader  = "../shaders/.glsl"
 
 [animation.scratchpad]
-enabled = false
-duration_ms = 200
-curve = "ease"
-dim = 0.5                      # 0.0-1.0
+enabled = true
+duration_ms = 215
+curve = "easeinoutcubic"
+dim = 0.42                      # 0.0-1.0
 blur = false
-scale = 0.0                    # 0 preserves the window geometry
-maximize = false
-fullscreen = false
 
 [animation.border]
 enabled = false
@@ -56,11 +65,11 @@ curve = "ease"
 enabled = false
 duration_ms = 200
 curve = "ease"
-dim = 0.0                      # 0.0-1.0
+dim = 0.0                       # 0.0-1.0
 # shader  = "../shaders/.glsl"
 
 [animation.layers]
-enabled = true                 # Turned on for Noctalia shell animations
-duration_ms = 200
-curve = "ease"
+enabled = true                  # Turned on for Noctalia shell animations
+duration_ms = 175
+curve = "easeoutcubic"
 # shader  = "../shaders/.glsl"
