@@ -158,3 +158,6 @@
 "Mod+W" = { action = "overview-toggle", repeat = false }
 "Mod+F11" = { action = "submap:passthrough", repeat = false }
 "submap[passthrough],Mod+F11" = "submap:reset"
+
+
+"Mod+MouseMiddle" = "layout-scroll-drag"
