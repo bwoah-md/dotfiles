@@ -59,7 +59,7 @@ format = '[ $symbol$branch ]($style) '
 
 [git_status]
 style = "bg:tertiary fg:on_tertiary"
-format = '([$all_status$ahead_behind]($style) )'
+format = '([ $all_status$ahead_behind ]($style) )'
 
 [nix_shell]
 symbol = "\uf313 "
