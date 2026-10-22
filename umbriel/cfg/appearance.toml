@@ -33,3 +33,17 @@ enabled = true
 softness = 30
 offset_x = 0
 offset_y = 0
+
+# [appearance.title_bar]
+# mode = "auto"
+# height = 26
+# font = "monospace 10"
+# button_position = "left"
+
+# [colors.title_bar]
+# background = "#292933FF"
+# background_unfocused = "#1A1A1FFF"
+# text = "#E8E8EAFF"
+# text_unfocused = "#8A8A92FF"
+# close = "#FF6B6BFF"
+# maximize = "#7AA3FFFF"
