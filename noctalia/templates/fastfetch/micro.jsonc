@@ -31,57 +31,57 @@
     "break",
     {
       "type": "title",
-      "format": "{#1;38;2;{{ colors.secondary.default.red }};{{ colors.secondary.default.green }};{{ colors.secondary.default.blue }}}{user-name}{#38;2;{{ colors.error.default.red }};{{ colors.error.default.green }};{{ colors.error.default.blue }}}@{#1;38;2;{{ colors.primary.default.red }};{{ colors.primary.default.green }};{{ colors.primary.default.blue }}}{host-name}{#0} ~"
+      "format": "{#1;38;2;{{ colors.secondary.default.red }};{{ colors.secondary.default.green }};{{ colors.secondary.default.blue }}}{user-name}{#38;2;{{ colors.error.default.red }};{{ colors.error.default.green }};{{ colors.error.default.blue }}}@{#1;38;2;{{ colors.primary.default.red }};{{ colors.primary.default.green }};{{ colors.primary.default.blue }}}{host-name}{#38;2;{{ colors.error.default.red }};{{ colors.error.default.green }};{{ colors.error.default.blue }}} ~{#0}"
     },
     "break",
     {
       "type": "os",
-      "key": "system           ",
+      "key": "system        ",
       "keyColor": "1;38;2;{{ colors.primary.default.red }};{{ colors.primary.default.green }};{{ colors.primary.default.blue }}",
       "format": "{2}"
     },
     {
       "type": "kernel",
-      "key": "kernel           ",
+      "key": "kernel        ",
       "keyColor": "1;38;2;{{ colors.secondary.default.red }};{{ colors.secondary.default.green }};{{ colors.secondary.default.blue }}",
       "format": "{2}"
     },
     {
       "type": "shell",
-      "key": "shell            ",
+      "key": "shell         ",
       "keyColor": "1;38;2;{{ colors.tertiary.default.red }};{{ colors.tertiary.default.green }};{{ colors.tertiary.default.blue }}",
       "format": "{1}"
     },
     {
       "type": "terminal",
-      "key": "terminal         ",
+      "key": "terminal      ",
       "keyColor": "1;38;2;{{ colors.tertiary_fixed_dim.default.red }};{{ colors.tertiary_fixed_dim.default.green }};{{ colors.tertiary_fixed_dim.default.blue }}",
       "format": "{1}"
     },
     {
       "type": "wm",
-      "key": "compositor       ",
-      "keyColor": "1;38;2;{{ colors.error.default.red }};{{ colors.error.default.green }};{{ colors.error.default.blue }}",
+      "key": "compositor    ",
+      "keyColor": "1;38;2;{{ colors.secondary.default.red }};{{ colors.secondary.default.green }};{{ colors.secondary.default.blue }}",
       "format": "{2}"
     },
     {
       "type": "command",
-      "key": "display          ",
+      "key": "display       ",
       "keyColor": "1;38;2;{{ colors.primary.default.red }};{{ colors.primary.default.green }};{{ colors.primary.default.blue }}",
       "text": "printf '%s' \"$XDG_SESSION_TYPE\" | tr '[:upper:]' '[:lower:]'"
     },
     {
       "type": "packages",
-      "key": "packages         ",
+      "key": "packages      ",
       "keyColor": "1;38;2;{{ colors.tertiary.default.red }};{{ colors.tertiary.default.green }};{{ colors.tertiary.default.blue }}",
       "format": "{nix-system}"
     },
     "break",
     {
       "type": "command",
-      "key": "colors           ",
-      "keyColor": "{{ colors.secondary.default.hex }}",
-      "text": "printf '\\033[38;2;{{ colors.primary.default.red }};{{ colors.primary.default.green }};{{ colors.primary.default.blue }}m● \\033[38;2;{{ colors.secondary.default.red }};{{ colors.secondary.default.green }};{{ colors.secondary.default.blue }}m● \\033[38;2;{{ colors.tertiary.default.red }};{{ colors.tertiary.default.green }};{{ colors.tertiary.default.blue }}m● \\033[38;2;{{ colors.tertiary_fixed_dim.default.red }};{{ colors.tertiary_fixed_dim.default.green }};{{ colors.tertiary_fixed_dim.default.blue }}m● \\033[38;2;{{ colors.error.default.red }};{{ colors.error.default.green }};{{ colors.error.default.blue }}m● \\033[0m'"
-    }
+      "key": " ",
+      "text": "printf '\\033[38;2;{{ colors.primary.default.red }};{{ colors.primary.default.green }};{{ colors.primary.default.blue }}m    \\033[38;2;{{ colors.secondary.default.red }};{{ colors.secondary.default.green }};{{ colors.secondary.default.blue }}m    \\033[38;2;{{ colors.tertiary.default.red }};{{ colors.tertiary.default.green }};{{ colors.tertiary.default.blue }}m    \\033[38;2;{{ colors.tertiary_fixed_dim.default.red }};{{ colors.tertiary_fixed_dim.default.green }};{{ colors.tertiary_fixed_dim.default.blue }}m    \\033[38;2;{{ colors.error.default.red }};{{ colors.error.default.green }};{{ colors.error.default.blue }}m\\033[0m'"
+    },
+    "break"
   ]
-}
+  }
