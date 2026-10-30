@@ -2,7 +2,7 @@
 [[window_rule]]
 blur = true
 blur_optimized = false
-# opacity = 0.9
+opacity = 1
 
 # ─── Noctalia / Umbriel ───
 [[window_rule]]
@@ -34,19 +34,25 @@ default_focused = false
 focus_on_activate = false
 default_pinned = true
 
-# ─── Yazi ───
+# ─── TUI Apps ───
 [[window_rule]]
-match.app_id = "^yazi\\.filemanager$"
+match.app_id = "^(yazi\\.filemanager|btop)$"
 default_floating = true
 default_floating_size = { width = 0.55, height = 0.55 }
-default_position = { x = 0, y = 0, anchor = "center" }
 
 # ─── General Floating ───
 [[window_rule]]
-match.app_id = "^(dev\\.lemmy\\.swash|Mullvad Browser|Tor Browser|org\\.kde\\.kdeconnect\\.handler|org\\.kde\\.kdeconnect\\.daemon|com\\.rafaelmardojai\\.Blanket)$"
+match.app_id = "^(Mullvad Browser|Tor Browser|org\\.kde\\.kdeconnect\\.handler|org\\.kde\\.kdeconnect\\.daemon)$"
 default_floating = true
 
 # ─── Custom Floating & Sized ───
+
+[[window_rule]]
+match.app_id = "^sioyek$"
+match.title = "^Select Document$"
+default_floating = true
+default_floating_size = { width = 0.478, height = 0.533 }
+
 [[window_rule]]
 match.app_id = "^org.localsend.localsend_app$"
 default_floating = true
@@ -72,6 +78,26 @@ default_floating_size = { width = 0.4, height = 0.4 }
 match.app_id = "^wlfreerdp$"
 opacity = 1.0
 
+[[window_rule]]
+match.app_id = "^org\\.kde\\.kdeconnect\\.(app|sms)$"
+default_floating = true
+default_floating_size = { width = 0.476, height = 0.540 }
+
+[[window_rule]]
+match.app_id = "^qt[56]ct$"
+default_floating = true
+default_floating_size = { width = 0.376, height = 0.638 }
+
+[[window_rule]]
+match.title = "^File Archiver$"
+default_floating = true
+default_floating_size = { width = 0.412, height = 0.507 }
+
+[[window_rule]]
+match.title = "^Klassy Settings$"
+default_floating = true
+default_floating_size = { width = 0.595, height = 0.659 }
+
 # ─── Opaque Floating ───
 [[window_rule]]
 match.app_id = "^(com\\.interversehq\\.qView|mpv)$"
@@ -80,7 +106,7 @@ default_floating = true
 
 # ─── Open Maximized ───
 [[window_rule]]
-match.app_id = "^(org\\.qutebrowser\\.qutebrowser|equibop||chrome-web\\.whatsapp\\.com__-Default|org\\.telegram\\.desktop|dev\\.zed\\.Zed)$"
+match.app_id = "^(org\\.qutebrowser\\.qutebrowser|equibop|org\\.telegram\\.desktop|dev\\.zed\\.Zed|sonora|zapfast)$"
 default_maximize = true
 
 # ─── Browser Floating Popups ───
@@ -95,13 +121,6 @@ default_position = { x = 0, y = 0, anchor = "center" }
 # Firefox Library window (History, Downloads, Bookmarks)
 [[window_rule]]
 match.title = "^Library$"
-default_floating = true
-default_floating_size = { width = 0.55, height = 0.6 }
-default_position = { x = 0, y = 0, anchor = "center" }
-
-# Separate downloads dialog (if using standalone/legacy downloads popups)
-[[window_rule]]
-match.title = ".*(Downloads|Opening).*"
 default_floating = true
 default_floating_size = { width = 0.55, height = 0.6 }
 default_position = { x = 0, y = 0, anchor = "center" }
