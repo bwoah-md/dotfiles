@@ -1,6 +1,6 @@
 [appearance]
 prefer_no_csd = true
-border_width = 2
+border_width = 0
 outer_border_width = 0
 corner_radius = 0
 drag_opacity = 0.75

@@ -46,7 +46,6 @@ match.app_id = "^(Mullvad Browser|Tor Browser|org\\.kde\\.kdeconnect\\.handler|o
 default_floating = true
 
 # ─── Custom Floating & Sized ───
-
 [[window_rule]]
 match.app_id = "^sioyek$"
 match.title = "^Select Document$"
@@ -106,11 +105,10 @@ default_floating = true
 
 # ─── Open Maximized ───
 [[window_rule]]
-match.app_id = "^(org\\.qutebrowser\\.qutebrowser|equibop|org\\.telegram\\.desktop|dev\\.zed\\.Zed|sonora|zapfast)$"
+match.app_id = "^(org\\.qutebrowser\\.qutebrowser|equibop|org\\.telegram\\.desktop|dev\\.zed\\.Zed|sonora|zapfast|io\\.github\\.lgse\\.Strata|helium)$"
 default_maximize = true
 
 # ─── Browser Floating Popups ───
-
 # Bitwarden
 [[window_rule]]
 match.title = ".*Bitwarden.*"

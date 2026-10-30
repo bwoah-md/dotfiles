@@ -5,7 +5,7 @@
 "Mod+Ctrl+E" = "spawn foot --class=yazi.filemanager -e yazi"
 "Mod+Escape" = "spawn foot --class=btop -e btop"
 "Mod+B" = "spawn librewolf"
-"Mod+E" = "spawn pcmanfm-qt --new-window"
+"Mod+E" = "spawn strata"
 "Mod+Z" = "spawn zeditor"
 
 # ── Panels ──

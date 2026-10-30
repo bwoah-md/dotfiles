@@ -18,6 +18,16 @@ style = "popin"                 # popin, zoom, slide, fade, none
 scale = 0.90                    # More subtle pop-in (default is 0.85)
 # shader  = "../shaders/.glsl"
 
+# Wobbly windows
+# [animation.windows_drag]
+# physics = true
+# stiffness = 36.0
+# damping = 6.5
+# coupling = 100.0
+# pointer_response = 2.0
+# max_displacement_px = 200.0
+# settle_after_pause_s = 0.25
+
 [animation.windows_out]
 enabled = true
 duration_ms = 165
