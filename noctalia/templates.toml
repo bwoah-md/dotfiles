@@ -29,6 +29,10 @@ output_path = "$XDG_CONFIG_HOME/fastfetch/small.jsonc"
 input_path = "$XDG_CONFIG_HOME/noctalia/templates/fastfetch/micro.jsonc"
 output_path = "$XDG_CONFIG_HOME/fastfetch/micro.jsonc"
 
+[theme.templates.user.fastfetch_tiny]
+input_path = "$XDG_CONFIG_HOME/noctalia/templates/fastfetch/tiny.jsonc"
+output_path = "$XDG_CONFIG_HOME/fastfetch/tiny.jsonc"
+
 # ----------------------------------------------------------------------
 # labwc:wlroots
 # ----------------------------------------------------------------------
