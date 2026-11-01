@@ -26,7 +26,7 @@ default_position = { x = 0, y = 0, anchor = "center" }
 [[window_rule]]
 match.title = "^(Picture-in-Picture|Picture in picture)$"
 default_floating = true
-default_floating_size = { width = 0.25, height = 0.25 }
+default_floating_size = { width = 0.23, height = 0.23 }
 default_output = "HDMI-A-1"
 opacity = 1.0
 default_position = { x = 10, y = 10, anchor = "bottom_right" }
