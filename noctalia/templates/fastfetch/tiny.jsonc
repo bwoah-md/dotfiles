@@ -1,0 +1,54 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "/home/icy/.config/fastfetch/tiny.txt",
+    "padding": {
+      "top": 0,
+      "left": 2,
+      "right": 4
+    },
+    "color": {
+      "1": "{{ colors.secondary.default.hex }}",
+      "2": "{{ colors.primary.default.hex }}"
+    }
+  },
+  "display": {
+    "separator": "",
+    "color": {
+      "keys": "{{ colors.primary.default.hex }}",
+      "title": "{{ colors.secondary.default.hex }}"
+    }
+  },
+  "modules": [
+    {
+      "type": "title",
+      "format": "{#1;38;2;{{ colors.terminal_bright_blue.default.red }};{{ colors.terminal_bright_blue.default.green }};{{ colors.terminal_bright_blue.default.blue }}}{user-name}{#38;2;{{ colors.terminal_bright_red.default.red }};{{ colors.terminal_bright_red.default.green }};{{ colors.terminal_bright_red.default.blue }}}@{#1;38;2;{{ colors.terminal_bright_cyan.default.red }};{{ colors.terminal_bright_cyan.default.green }};{{ colors.terminal_bright_cyan.default.blue }}}{host-name}{#0}"
+    },
+    "break",
+    {
+      "type": "os",
+      "key": "OS  ",
+      "keyColor": "1;38;2;{{ colors.primary.default.red }};{{ colors.primary.default.green }};{{ colors.primary.default.blue }}",
+      "format": "{#38;2;{{ colors.terminal_normal_white.default.red }};{{ colors.terminal_normal_white.default.green }};{{ colors.terminal_normal_white.default.blue }}}NixOS{#0}"
+    },
+    {
+      "type": "wm",
+      "key": "WM  ",
+      "keyColor": "1;38;2;{{ colors.secondary.default.red }};{{ colors.secondary.default.green }};{{ colors.secondary.default.blue }}",
+      "format": "{#38;2;{{ colors.terminal_normal_white.default.red }};{{ colors.terminal_normal_white.default.green }};{{ colors.terminal_normal_white.default.blue }}}Umbriel{#0}"
+    },
+    {
+      "type": "shell",
+      "key": "SH  ",
+      "keyColor": "1;38;2;{{ colors.tertiary.default.red }};{{ colors.tertiary.default.green }};{{ colors.tertiary.default.blue }}",
+      "format": "{#38;2;{{ colors.terminal_normal_white.default.red }};{{ colors.terminal_normal_white.default.green }};{{ colors.terminal_normal_white.default.blue }}}Fish{#0}"
+    },
+    "break",
+    {
+      "type": "command",
+      "key": "CO  ",
+      "keyColor": "1;38;2;{{ colors.hover.default.red }};{{ colors.hover.default.green }};{{ colors.hover.default.blue }}",
+      "text": "printf '\\033[38;2;{{ colors.primary.default.red }};{{ colors.primary.default.green }};{{ colors.primary.default.blue }}m● \\033[38;2;{{ colors.secondary.default.red }};{{ colors.secondary.default.green }};{{ colors.secondary.default.blue }}m● \\033[38;2;{{ colors.tertiary.default.red }};{{ colors.tertiary.default.green }};{{ colors.tertiary.default.blue }}m● \\033[38;2;{{ colors.hover.default.red }};{{ colors.hover.default.green }};{{ colors.hover.default.blue }}m●\\033[0m'"
+    }
+  ]
+}
