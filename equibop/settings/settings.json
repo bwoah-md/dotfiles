@@ -168,9 +168,6 @@
         "Experiments": {
             "enabled": false
         },
-        "ExpressionCloner": {
-            "enabled": false
-        },
         "F8Break": {
             "enabled": false
         },
@@ -766,9 +763,6 @@
         "FastDeleteChannels": {
             "enabled": false
         },
-        "FavouriteAnything": {
-            "enabled": false
-        },
         "FileUpload": {
             "enabled": false
         },
@@ -1217,21 +1211,6 @@
             "enabled": true,
             "disableAnalytics": true
         },
-        "EquicordHelper": {
-            "enabled": true,
-            "noMirroredCamera": false,
-            "removeActivitySection": false,
-            "showYourOwnActivityButtons": false,
-            "forceRoleIcon": false,
-            "restoreFileDownloadButton": false,
-            "noModalAnimation": false,
-            "disableAdoptTagPrompt": false,
-            "jsonGateway": false,
-            "hideVoiceIndicatorForMutedChannels": false,
-            "noBulletPoints": false,
-            "accountStandingButton": false,
-            "refreshSlashCommands": false
-        },
         "Settings": {
             "enabled": true,
             "settingsLocation": "aboveNitro",
@@ -1263,6 +1242,27 @@
         },
         "GifProviderSwitcher": {
             "enabled": false
+        },
+        "EquiTweaks": {
+            "enabled": true,
+            "noMirroredCamera": false,
+            "removeActivitySection": false,
+            "showYourOwnActivityButtons": false,
+            "forceRoleIcon": false,
+            "restoreFileDownloadButton": false,
+            "noModalAnimation": false,
+            "disableAdoptTagPrompt": false,
+            "jsonGateway": false,
+            "hideVoiceIndicatorForMutedChannels": false,
+            "noBulletPoints": false,
+            "accountStandingButton": false,
+            "refreshSlashCommands": false
+        },
+        "FavoriteAnything": {
+            "enabled": false
+        },
+        "ExpressionManager": {
+            "enabled": false
         }
     },
     "uiElements": {
@@ -1280,8 +1280,9 @@
         "authenticated": false,
         "url": "https://cloud.equicord.org/",
         "settingsSync": false,
-        "settingsSyncVersion": 1791432404176
+        "settingsSyncVersion": 1793337346916
     },
     "ignoreResetWarning": false,
-    "nativeTitleBar": false
+    "nativeTitleBar": false,
+    "noRoundCorners": false
 }
