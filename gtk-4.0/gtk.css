@@ -1,0 +1,33 @@
+/*GTK4*/
+
+@import url("noctalia.css");
+
+* {
+    border-radius: 0;
+}
+
+window,
+window.background,
+window.csd,
+window.solid-csd,
+window.maximized,
+decoration,
+decoration-overlay,
+button,
+entry,
+popover > contents,
+tooltip,
+.card {
+    border-radius: 0;
+}
+windowcontrols,
+windowcontrols button,
+windowcontrols button image {
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    opacity: 0;
+    -gtk-icon-size: 0;
+}
