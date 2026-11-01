@@ -1,0 +1,48 @@
+/*GTK3*/
+
+@import url("noctalia.css");
+
+* {
+    border-radius: 0;
+}
+
+decoration,
+window,
+window.background,
+window.titlebar,
+.titlebar,
+.titlebar .background,
+.background.csd,
+.background.maximized,
+.background.solid-csd,
+button,
+entry,
+menu,
+menuitem,
+tooltip,
+popover {
+    border-radius: 0;
+}
+
+.window-frame,
+.window-frame:backdrop {
+    border-radius: 0;
+    border-style: none;
+    box-shadow: 0 0 0 black;
+    margin: 0;
+}
+
+button.suggested-action,
+button.destructive-action,
+button.default,
+button:focus,
+button:checked,
+button:hover,
+button:active {
+    border-radius: 0;
+    -gtk-outline-radius: 0;
+}
+
+* {
+    -gtk-outline-radius: 0;
+}
