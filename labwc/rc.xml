@@ -51,6 +51,7 @@
     <!-- Base Binds -->
     <keybind key="W-Return"><action name="Execute" command="foot"/></keybind>
     <keybind key="W-C-e"><action name="Execute" command="foot yazi"/></keybind>
+    <keybind key="W-Escape"><action name="Execute" command="foot -e btop"/></keybind>
     <keybind key="W-b"><action name="Execute" command="librewolf"/></keybind>
     <keybind key="W-e"><action name="Execute" command="pcmanfm-qt --new-window"/></keybind>
     <keybind key="W-z"><action name="Execute" command="zeditor"/></keybind>
@@ -68,6 +69,7 @@
     <keybind key="W-y"><action name="Execute" command="noctalia msg panel-toggle aabidk20/yt-music:panel"/></keybind>
     <keybind key="C-S-Escape"><action name="Execute" command="noctalia msg panel-toggle session"/></keybind>
     <keybind key="W-Semicolon"><action name="Execute" command="noctalia msg panel-toggle launcher &quot;;e &quot;"/></keybind>
+    <keybind key="W-S-a"><action name="Execute" command="noctalia msg annotate"/></keybind>
 
     <!-- Screenshots & Recording -->
     <keybind key="C-S-1"><action name="Execute" command="noctalia msg screenshot-region"/></keybind>
