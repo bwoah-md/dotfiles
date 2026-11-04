@@ -4,6 +4,8 @@ autostart = [
     # NOTE: Remove this line before you apply this script in umbriel otherwise system won't load
     # ==========================================================================================
     "cp -f \"$HOME/.config/umbriel/noctalia/config.toml\" \"$HOME/.config/noctalia/config.toml\"",
+
+    "systemctl --user restart xdg-desktop-portal-umbriel.service xdg-desktop-portal-gtk.service xdg-desktop-portal.service",
     "noctalia",
-    "kdeconnectd"
+    "kdeconnectd",
 ]
