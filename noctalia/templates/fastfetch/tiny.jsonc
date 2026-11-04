@@ -32,10 +32,11 @@
       "format": "{#38;2;{{ colors.terminal_normal_white.default.red }};{{ colors.terminal_normal_white.default.green }};{{ colors.terminal_normal_white.default.blue }}}NixOS{#0}"
     },
     {
-      "type": "wm",
+      "type": "command",
       "key": "WM  ",
       "keyColor": "1;38;2;{{ colors.secondary.default.red }};{{ colors.secondary.default.green }};{{ colors.secondary.default.blue }}",
-      "format": "{#38;2;{{ colors.terminal_normal_white.default.red }};{{ colors.terminal_normal_white.default.green }};{{ colors.terminal_normal_white.default.blue }}}Umbriel{#0}"
+      "text": "if [ \"$XDG_CURRENT_DESKTOP\" = \"Umbriel\" ] || [ \"$XDG_SESSION_DESKTOP\" = \"umbriel\" ]; then printf 'Umbriel'; else printf 'LabWC'; fi",
+      "format": "{#38;2;{{ colors.terminal_normal_white.default.red }};{{ colors.terminal_normal_white.default.green }};{{ colors.terminal_normal_white.default.blue }}}{result}{#0}"
     },
     {
       "type": "shell",
